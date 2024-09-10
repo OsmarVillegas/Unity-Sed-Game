@@ -1,0 +1,4 @@
+repository "Sed@osmarvm25@cloud"
+  path "/"
+    br "/main"
+    co "/main"
