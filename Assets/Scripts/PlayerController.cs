@@ -63,10 +63,14 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float tiempoSaltoPared;
 
+    [Range(0, 1)] [SerializeField] private float fuerzaSalto;
+
     private bool saltoDePared;
 
+    // Para evitar errores en el salto se genero esta segunda variable.
     private bool saltarPared;
 
+    bool saltoContinuo;
 
     [Header("Animacion")]
 
@@ -82,7 +86,9 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        movimientoHoritontal = Input.GetAxis("Horizontal") * velocidadDeMovimiento;
+
+
+        movimientoHoritontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
 
         animator.SetFloat("Horizontal", Mathf.Abs(movimientoHoritontal));
 
@@ -98,7 +104,6 @@ public class PlayerController : MonoBehaviour
             
             if (enPared)
             {
-
                 saltarPared = true;
             }
         }
@@ -135,23 +140,59 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private bool spriteSaltoPared;
+    private float valor;
+    private bool saltoParedUnaVez;
+
     private void Mover(float mover, bool salto)
     {
-
-        if (!saltoDePared) { 
+        if (!saltoDePared) {
             Vector3 velocidadObjetivo = new Vector2(mover, rb2d.velocity.y);
             rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, velocidadObjetivo, ref velocidad, suavisadoDeMovimiento);
         }
 
-        if (mover > 0 && !mirandoDerecha)
+        if (enSuelo)
         {
-            // Girar
-            Girar();
+            saltoParedUnaVez = false;
         }
-        else if (mover < 0 && mirandoDerecha)
+
+        if (spriteSaltoPared)
         {
-            // Girar
+            mover *= -1;
+            valor = mover;
+
+            if (valor > 0 && !mirandoDerecha && !saltoParedUnaVez)
+            {
+                // Girar
+                Girar();
+                saltoParedUnaVez = true;
+            }
+
+            else if (valor < 0 && mirandoDerecha && !saltoParedUnaVez)
+            {
+                // Girar
+                Girar();
+                saltoParedUnaVez = true;
+            }
+        }
+
+        if (spriteSaltoPared)
+        {
+            mover = 0;
+        }
+
+        print(mover);
+        if (mover > 0 && !mirandoDerecha && !spriteSaltoPared)
+        {
+            // girar
             Girar();
+
+        }
+        else if (mover < 0 && mirandoDerecha && !spriteSaltoPared)
+        {
+            // girar
+            Girar();
+
         }
 
         // Salto
@@ -170,9 +211,11 @@ public class PlayerController : MonoBehaviour
         }
 
         // SaltoPared
-        if (saltarPared && enPared & deslizando)
+        if (saltarPared && enPared && deslizando)
         {
+            spriteSaltoPared = true;
             SaltoPared();
+
         }
 
     }
@@ -203,17 +246,30 @@ public class PlayerController : MonoBehaviour
     {
         saltarPared = false;
         enPared = false;
-        rb2d.velocity = new Vector2(fuerzaSaltoParedX * -Input.GetAxis("Horizontal"), fuerzaSaltoParedY);
+
+
+        if (movimientoHoritontal < 0)
+        {
+            rb2d.velocity = new Vector2(fuerzaSaltoParedX * fuerzaSalto, fuerzaSaltoParedY);
+        }
+        else if (movimientoHoritontal > 0)
+        {   
+            rb2d.velocity = new Vector2(fuerzaSaltoParedX * -fuerzaSalto, fuerzaSaltoParedY);
+        }
 
         // Esperar
         StartCoroutine(CambioSaltoPared());
+
     }
 
     IEnumerator CambioSaltoPared()
     {
         saltoDePared = true;
+
         yield return new WaitForSeconds(tiempoSaltoPared);
+
         saltoDePared = false;
+        spriteSaltoPared = false;
     }
 
     private void Girar()
