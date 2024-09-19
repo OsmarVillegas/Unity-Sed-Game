@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+
+public class PlayerController_2 : MonoBehaviour
 {
     private Rigidbody2D rb2d;
 
     [Header("Movimiento")]
 
-    private float movimientoHoritontal = 0f;
+    private float movimientoHorizontal = 0f;
 
     [SerializeField] private float velocidadDeMovimiento;
 
@@ -17,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private Vector3 velocidad = Vector3.zero;
 
-    private bool mirandoDerecha = true;
+    private bool mirandoDerecha;
 
     [Header("Salto")]
 
@@ -39,13 +40,15 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float multiplicadorDeGravedad;
 
-    private float escalaGravedad;
+    private float escalaGravedadNormal;
 
     private bool botonSaltoArriba = true;
 
     [Header("SaltoPared")]
 
     [SerializeField] private Transform controladorPared;
+
+    [SerializeField] private Transform controladorEspaldaPared;
 
     [SerializeField] private LayerMask Pared;
 
@@ -63,48 +66,83 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float tiempoSaltoPared;
 
-    [Range(0, 1)] [SerializeField] private float fuerzaSalto;
+    [Range(0, 1)][SerializeField] private float fuerzaSalto;
+
+    private bool espaldaPared;
 
     private bool saltoDePared;
 
-    // Para evitar errores en el salto se genero esta segunda variable.
-    private bool saltarPared;
+    private bool saltoDeParedVerificadorCondicional;
 
-    bool saltoContinuo;
+    private bool seRealizaSalto;
+
+    private bool variableFrame = true;
+
+    private float ultimoValorPared;
 
     [Header("Animacion")]
 
     private Animator animator;
 
+    [Header("Esquivar")]
+
+    [SerializeField] private float distanciaEsquive;
+
+    [SerializeField] private float cooldownEsquive;
+
+    private bool esquivar = false;
+
+    [Header("Collider")]
+
+    private PolygonCollider2D polygonCollider;
+
+    private Vector2[] originalPoints;
+
+    private Vector2[] agacharsePoints; 
+
+
+    // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        escalaGravedad = rb2d.gravityScale;
+        escalaGravedadNormal = rb2d.gravityScale;
+
+        // Obtén la referencia al PolygonCollider2D
+        polygonCollider = GetComponent<PolygonCollider2D>();
+
+        // Guarda los puntos originales del collider
+        originalPoints = polygonCollider.points;
+
+
+
+        for (int i = 0; i < originalPoints.Length; i++)
+        { 
+            print(originalPoints[i]);
+        }
     }
+
+    // Update is called once per frame
     void Update()
     {
+        // Movimiento
 
+        if (!seRealizaSalto && !esquivar) { 
+            movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
+        }
 
-
-        movimientoHoritontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento;
-
-        animator.SetFloat("Horizontal", Mathf.Abs(movimientoHoritontal));
-
-        animator.SetFloat("VelocidadY", rb2d.velocity.y);
-
-        animator.SetBool("Deslizando", deslizando);
-
+        // Saltar
         if (Input.GetButtonDown("Jump"))
         {
-            if (enSuelo) {
+            if (enSuelo)
+            {
                 salto = true;
             }
-            
+
             if (enPared)
             {
-                saltarPared = true;
+                saltoDeParedVerificadorCondicional = true;
             }
         }
 
@@ -113,7 +151,9 @@ public class PlayerController : MonoBehaviour
             BotonSaltoArriba();
         }
 
-        if (!enSuelo && enPared && movimientoHoritontal != 0)
+        // Deslizar
+
+        if (!enSuelo && enPared)
         {
             deslizando = true;
         }
@@ -122,113 +162,114 @@ public class PlayerController : MonoBehaviour
             deslizando = false;
         }
 
-    }
-
-    private void FixedUpdate()
-    {
-        
-        animator.SetBool("enSuelo", enSuelo);
-        enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
-        enPared = Physics2D.OverlapBox(controladorPared.position, dimensionesCajaPared, 0f, Pared);
-
-        // Movimiento
-        Mover(movimientoHoritontal * Time.fixedDeltaTime, salto);
-
-        if (deslizando)
+        if (Input.GetButtonDown("Esquivar"))
         {
-            rb2d.velocity = new Vector3(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -velocidadDeslizar, float.MaxValue));
+            if (enSuelo) { 
+                esquivar = true;
+            }
         }
+
+        // Animator
+        animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
+        animator.SetFloat("VelocidadY", rb2d.velocity.y);
+        animator.SetBool("Deslizando", deslizando);
+        animator.SetBool("Esquivando", esquivar);
     }
 
-    private bool spriteSaltoPared;
-    private float valor;
-    private bool saltoParedUnaVez;
+    private bool primerValorTomado;
 
-    private void Mover(float mover, bool salto)
+    void FixedUpdate()
     {
-        if (!saltoDePared) {
-            Vector3 velocidadObjetivo = new Vector2(mover, rb2d.velocity.y);
-            rb2d.velocity = Vector3.SmoothDamp(rb2d.velocity, velocidadObjetivo, ref velocidad, suavisadoDeMovimiento);
-        }
+        enPared = Physics2D.OverlapBox(controladorPared.position, dimensionesCajaPared, 0f, Pared);
+        enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
+
+        animator.SetBool("enSuelo", enSuelo);
 
         if (enSuelo)
         {
-            saltoParedUnaVez = false;
+            variableFrame = true;
         }
 
-        if (spriteSaltoPared)
-        {
-            mover *= -1;
-            valor = mover;
-
-            if (valor > 0 && !mirandoDerecha && !saltoParedUnaVez)
-            {
-                // Girar
-                Girar();
-                saltoParedUnaVez = true;
-            }
-
-            else if (valor < 0 && mirandoDerecha && !saltoParedUnaVez)
-            {
-                // Girar
-                Girar();
-                saltoParedUnaVez = true;
-            }
-        }
-
-        if (spriteSaltoPared)
-        {
-            mover = 0;
-        }
-
-        print(mover);
-        if (mover > 0 && !mirandoDerecha && !spriteSaltoPared)
-        {
-            // girar
-            Girar();
-
-        }
-        else if (mover < 0 && mirandoDerecha && !spriteSaltoPared)
-        {
-            // girar
-            Girar();
-
-        }
+        // Movimiento
+        MovimientoLateral(movimientoHorizontal * Time.fixedDeltaTime);
 
         // Salto
-        if (salto && enSuelo && botonSaltoArriba && !deslizando)
+        Salto();
+
+        // Deslizar
+        Deslizar();
+
+        // Esquive
+        Esquivar();
+
+        // Salto desde la pared
+        // saltoDeParedVerificadorCondicional
+        if (saltoDeParedVerificadorCondicional && enPared && deslizando)
         {
-            Salto();
+
+            espaldaPared = Physics2D.OverlapBox(controladorEspaldaPared.position, dimensionesCajaPared, 0f, Pared);
+            if (!espaldaPared)
+            {
+                seRealizaSalto = true;
+                SaltoPared();
+            }
+            else
+            {
+                saltoDeParedVerificadorCondicional = false;
+            }
+
+        }
+    }
+
+    void Esquivar()
+    {
+        if (enSuelo && !enPared && esquivar)
+        {
+            if (!mirandoDerecha)
+            {
+                rb2d.velocity = new Vector2(distanciaEsquive, rb2d.velocity.y);
+            }
+            else if (mirandoDerecha)
+            {
+                rb2d.velocity = new Vector2(-distanciaEsquive, rb2d.velocity.y);
+            }
+
+            StartCoroutine(CooldownEsquive());
+        }
+    }
+
+    void MovimientoLateral(float velocidadLateral)
+    {
+        if (!saltoDePared)
+        {
+            rb2d.velocity = new Vector2(velocidadLateral, rb2d.velocity.y);
+        }
+
+        GirarPersonaje(velocidadLateral);
+    }
+
+    void Salto()
+    {
+        // Salto
+        if (salto && enSuelo)
+        {
+            Saltar();
         }
 
         if (rb2d.velocity.y < 0 && !enSuelo)
         {
-            rb2d.gravityScale = escalaGravedad * multiplicadorDeGravedad;
+            rb2d.gravityScale = escalaGravedadNormal * multiplicadorDeGravedad;
         }
         else
         {
-            rb2d.gravityScale = escalaGravedad;
+            rb2d.gravityScale = escalaGravedadNormal;
         }
-
-        // SaltoPared
-        if (saltarPared && enPared && deslizando)
-        {
-            spriteSaltoPared = true;
-            SaltoPared();
-
-        }
-
     }
 
-    private void Salto()
+    private void Saltar()
     {
-        rb2d.gravityScale = 0;
         rb2d.AddForce(new Vector2(0f, fuerzaDeSalto));
-        rb2d.gravityScale = escalaGravedad;
-        enSuelo = false;
         salto = false;
-        botonSaltoArriba = false;
-        saltarPared = false;
     }
 
     private void BotonSaltoArriba()
@@ -242,37 +283,70 @@ public class PlayerController : MonoBehaviour
         salto = false;
     }
 
+    private void Deslizar()
+    {
+        if (deslizando)
+        {
+            rb2d.velocity = new Vector3(rb2d.velocity.x, Mathf.Clamp(rb2d.velocity.y, -velocidadDeslizar, float.MaxValue));
+        }
+    }
+
     private void SaltoPared()
     {
-        saltarPared = false;
-        enPared = false;
+        // Se resetea el valor de salto para volver a saltar desde la pared
+        saltoDePared = false;
+        saltoDeParedVerificadorCondicional = false;
 
-
-        if (movimientoHoritontal < 0)
+        if (!mirandoDerecha && deslizando)
         {
-            rb2d.velocity = new Vector2(fuerzaSaltoParedX * fuerzaSalto, fuerzaSaltoParedY);
-        }
-        else if (movimientoHoritontal > 0)
-        {   
+            variableFrame = false;
+            rb2d.velocity = Vector2.zero;
             rb2d.velocity = new Vector2(fuerzaSaltoParedX * -fuerzaSalto, fuerzaSaltoParedY);
         }
+        else if (mirandoDerecha && deslizando)
+        {
+            variableFrame = false;
+            rb2d.velocity = Vector2.zero;
+            rb2d.velocity = new Vector2(fuerzaSaltoParedX * fuerzaSalto, fuerzaSaltoParedY);
+        }
 
-        // Esperar
         StartCoroutine(CambioSaltoPared());
+    }
 
+    IEnumerator CooldownEsquive()
+    {
+        yield return new WaitForSeconds(cooldownEsquive);
+
+        esquivar = false;
     }
 
     IEnumerator CambioSaltoPared()
     {
         saltoDePared = true;
-
         yield return new WaitForSeconds(tiempoSaltoPared);
-
         saltoDePared = false;
-        spriteSaltoPared = false;
+        seRealizaSalto = false;
     }
 
-    private void Girar()
+    private bool primerSaltoPared;
+
+    private bool ultimoSaltoDerecha;
+
+    private bool ultimoSaltoIzquierda;
+
+    void GirarPersonaje(float movimientoLateral)
+    {
+        if (rb2d.velocity.x > 0 && mirandoDerecha)
+        {
+            Girar();
+        }
+        else if (rb2d.velocity.x < 0 && !mirandoDerecha)
+        {
+            Girar();
+        }
+    }
+
+    void Girar()
     {
         mirandoDerecha = !mirandoDerecha;
         Vector3 escala = transform.localScale;
@@ -285,5 +359,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireCube(controladorSuelo.position, dimensionesCajaSalto);
         Gizmos.DrawWireCube(controladorPared.position, dimensionesCajaPared);
+        Gizmos.DrawWireCube(controladorEspaldaPared.position, dimensionesCajaPared);
     }
+
 }
