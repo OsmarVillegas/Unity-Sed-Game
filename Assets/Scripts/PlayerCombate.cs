@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Timeline;
 using UnityEngine;
 
 public class PlayerCombate : MonoBehaviour
@@ -20,48 +21,73 @@ public class PlayerCombate : MonoBehaviour
 
     [Header("Dash")]
 
-    [SerializeField] private float velocidadDash;
+    [SerializeField] private float dashingPower;
 
-    [SerializeField] private float distanciaDash;
+    [SerializeField] private float dashingTime;
+
+    [SerializeField] private float dashingCooldown;
+
+    [SerializeField] private TrailRenderer tr;
+
+    private Rigidbody2D rb;
 
     private Vector2 dashDirection;
     
     private bool isDashing;
 
-    private float distanceTraveled = 0f;
+    private bool canDash = true;
+
+    private Animator animator;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        animator.SetBool("Golpe", false);
+    }
 
     private void Update(){
-        if (Input.GetButtonDown("Fire1"))
+
+        if (isDashing)
+        {
+            return;
+        }
+
+        if (Input.GetButtonDown("Fire1") && canDash)
         {
             Golpe();
-            Dash();
-            RealizarDash();
+            StartCoroutine(Dash());
         }
 
         mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
-        // Verificar si la posición del mouse está dentro del radio permitido
         if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
         {
-            // Si está dentro del área permitida, actualizar la posición objetivo
             targetPosition = mouseWorldPosition;
         }
         else
         {
-            // Si está fuera del área permitida, calcular la posición más cercana dentro del radio
             Vector3 direction = (mouseWorldPosition - transform.position).normalized;
             targetPosition = transform.position + direction * maxDistanceFromPlayer;
         }
 
-        // Calcular la distancia total entre la posición actual y la posición objetivo
         float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
         controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
 
     }
 
+    private void FixedUpdate()
+    {
+        if (isDashing)
+        {
+            return;
+        }
+    }
+
     private void Golpe()
     {
+
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
 
         foreach (Collider2D colisionador in objetos)
@@ -72,32 +98,23 @@ public class PlayerCombate : MonoBehaviour
             }
         }
     }
-
-    private void Dash()
+    private IEnumerator Dash()
     {
-        mouseWorldPosition.z = 0;
-
-        dashDirection = (mouseWorldPosition - transform.position).normalized;
-
+        animator.SetBool("Golpe", true);
+        canDash = false;
         isDashing = true;
-        distanceTraveled = 0f;
-    }
-
-    private void RealizarDash()
-    {
-        if (isDashing)
-        {
-            float distanceToMove = velocidadDash * Time.deltaTime;
-
-            transform.position += (Vector3)dashDirection * distanceToMove;
-
-            distanceTraveled += distanceToMove;
-
-            if (distanceTraveled >= distanciaDash)
-            {
-                isDashing = false;
-            }
-        }
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0;
+        Vector3 dashDirection = (mouseWorldPosition - transform.position).normalized;
+        rb.velocity = dashDirection * dashingPower;
+        tr.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        animator.SetBool("Golpe", false); 
+        tr.emitting = false;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+        rb.gravityScale = originalGravity;
     }
 
     private void OnDrawGizmos()

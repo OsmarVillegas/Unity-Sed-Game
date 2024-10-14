@@ -42,8 +42,6 @@ public class PlayerController_2 : MonoBehaviour
 
     private float escalaGravedadNormal;
 
-    private bool botonSaltoArriba = true;
-
     [Header("SaltoPared")]
 
     [SerializeField] private Transform controladorPared;
@@ -76,8 +74,6 @@ public class PlayerController_2 : MonoBehaviour
 
     private bool seRealizaSalto;
 
-    private bool variableFrame = true;
-
     private float ultimoValorPared;
 
     [Header("Animacion")]
@@ -98,8 +94,11 @@ public class PlayerController_2 : MonoBehaviour
 
     private Vector2[] originalPoints;
 
-    private Vector2[] agacharsePoints; 
+    private Vector2[] agacharsePoints;
 
+    [Header("Ataque")]
+
+    private bool estaAtacando;
 
     // Start is called before the first frame update
     void Start()
@@ -166,7 +165,17 @@ public class PlayerController_2 : MonoBehaviour
         {
             if (enSuelo) { 
                 esquivar = true;
+                animator.SetBool("Esquivando", esquivar);
             }
+        }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            estaAtacando = true;
+        }
+
+        if (Input.GetButtonUp("Fire1")){
+            estaAtacando = false;
         }
 
         // Animator
@@ -176,19 +185,12 @@ public class PlayerController_2 : MonoBehaviour
         animator.SetBool("Esquivando", esquivar);
     }
 
-    private bool primerValorTomado;
-
     void FixedUpdate()
     {
         enPared = Physics2D.OverlapBox(controladorPared.position, dimensionesCajaPared, 0f, Pared);
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
 
         animator.SetBool("enSuelo", enSuelo);
-
-        if (enSuelo)
-        {
-            variableFrame = true;
-        }
 
         // Movimiento
         MovimientoLateral(movimientoHorizontal * Time.fixedDeltaTime);
@@ -240,11 +242,11 @@ public class PlayerController_2 : MonoBehaviour
 
     void MovimientoLateral(float velocidadLateral)
     {
-        if (!saltoDePared)
+        if (!saltoDePared && !estaAtacando)
         {
             rb2d.velocity = new Vector2(velocidadLateral, rb2d.velocity.y);
         }
-
+        
         GirarPersonaje(velocidadLateral);
     }
 
@@ -279,7 +281,6 @@ public class PlayerController_2 : MonoBehaviour
             rb2d.AddForce(Vector2.down * rb2d.velocity.y * (1 - multiplicadorCancelarSalto), ForceMode2D.Impulse);
         }
 
-        botonSaltoArriba = true;
         salto = false;
     }
 
@@ -299,13 +300,13 @@ public class PlayerController_2 : MonoBehaviour
 
         if (!mirandoDerecha && deslizando)
         {
-            variableFrame = false;
+
             rb2d.velocity = Vector2.zero;
             rb2d.velocity = new Vector2(fuerzaSaltoParedX * -fuerzaSalto, fuerzaSaltoParedY);
         }
         else if (mirandoDerecha && deslizando)
         {
-            variableFrame = false;
+
             rb2d.velocity = Vector2.zero;
             rb2d.velocity = new Vector2(fuerzaSaltoParedX * fuerzaSalto, fuerzaSaltoParedY);
         }
@@ -327,12 +328,6 @@ public class PlayerController_2 : MonoBehaviour
         saltoDePared = false;
         seRealizaSalto = false;
     }
-
-    private bool primerSaltoPared;
-
-    private bool ultimoSaltoDerecha;
-
-    private bool ultimoSaltoIzquierda;
 
     void GirarPersonaje(float movimientoLateral)
     {
