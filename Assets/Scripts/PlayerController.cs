@@ -182,7 +182,6 @@ public class PlayerController_2 : MonoBehaviour
         animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
         animator.SetFloat("VelocidadY", rb2d.velocity.y);
         animator.SetBool("Deslizando", deslizando);
-        animator.SetBool("Esquivando", esquivar);
     }
 
     void FixedUpdate()
@@ -225,6 +224,7 @@ public class PlayerController_2 : MonoBehaviour
 
     void Esquivar()
     {
+
         if (enSuelo && !enPared && esquivar)
         {
             if (!mirandoDerecha)
@@ -317,8 +317,8 @@ public class PlayerController_2 : MonoBehaviour
     IEnumerator CooldownEsquive()
     {
         yield return new WaitForSeconds(cooldownEsquive);
-
         esquivar = false;
+        animator.SetBool("Esquivando", esquivar);
     }
 
     IEnumerator CambioSaltoPared()

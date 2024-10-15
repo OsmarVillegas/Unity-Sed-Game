@@ -42,6 +42,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Fondo
+    uniqueID: 4001424013
+    locked: 0
+  - name: Mapa
+    uniqueID: 544734233
+    locked: 0
   - name: Jugador
     uniqueID: 2394002419
     locked: 0
