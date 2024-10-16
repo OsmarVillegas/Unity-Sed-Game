@@ -161,11 +161,10 @@ public class PlayerController_2 : MonoBehaviour
             deslizando = false;
         }
 
-        if (Input.GetButtonDown("Esquivar"))
+        if (Input.GetButtonDown("Esquivar") && !esquivar)
         {
             if (enSuelo) { 
                 esquivar = true;
-                animator.SetBool("Esquivando", esquivar);
             }
         }
 
@@ -224,9 +223,10 @@ public class PlayerController_2 : MonoBehaviour
 
     void Esquivar()
     {
-
         if (enSuelo && !enPared && esquivar)
         {
+            animator.SetBool("Esquivando", esquivar);
+
             if (!mirandoDerecha)
             {
                 rb2d.velocity = new Vector2(distanciaEsquive, rb2d.velocity.y);
