@@ -105,7 +105,7 @@ TextureImporter:
         width: 34
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,7 +126,7 @@ TextureImporter:
         width: 34
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +147,7 @@ TextureImporter:
         width: 34
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
         width: 34
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -186,10 +186,10 @@ TextureImporter:
         serializedVersion: 2
         x: 206
         y: 7
-        width: 34
+        width: 35
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -207,10 +207,10 @@ TextureImporter:
         serializedVersion: 2
         x: 256
         y: 7
-        width: 34
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -228,10 +228,10 @@ TextureImporter:
         serializedVersion: 2
         x: 306
         y: 7
-        width: 34
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -249,10 +249,10 @@ TextureImporter:
         serializedVersion: 2
         x: 356
         y: 7
-        width: 34
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,10 +270,10 @@ TextureImporter:
         serializedVersion: 2
         x: 406
         y: 7
-        width: 34
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -291,10 +291,10 @@ TextureImporter:
         serializedVersion: 2
         x: 456
         y: 7
-        width: 34
+        width: 37
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,12 +310,12 @@ TextureImporter:
       name: Battle_Run-Sheet_10
       rect:
         serializedVersion: 2
-        x: 506
+        x: 507
         y: 7
-        width: 34
+        width: 36
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
