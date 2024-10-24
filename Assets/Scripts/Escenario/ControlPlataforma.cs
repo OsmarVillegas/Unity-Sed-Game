@@ -6,7 +6,7 @@ public class ControlPlataforma : MonoBehaviour
 {
     PlatformEffector2D pE2D;
 
-    public bool leftPlatform;
+    private bool leftPlatform;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +24,24 @@ public class ControlPlataforma : MonoBehaviour
             leftPlatform = true;
 
             gameObject.layer = 2;
+
+            StartCoroutine(CooldownReiniciar());
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
+    {
+        RegresarPlataforma();
+    }
+
+    private IEnumerator CooldownReiniciar()
+    {
+        yield return new WaitForSeconds(0.5f);
+        RegresarPlataforma();
+    }
+
+
+    private void RegresarPlataforma()
     {
         pE2D.rotationalOffset = 0;
 

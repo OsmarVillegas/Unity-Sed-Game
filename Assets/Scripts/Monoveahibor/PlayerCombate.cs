@@ -60,7 +60,8 @@ public class PlayerCombate : MonoBehaviour
         }
 
         mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        
+        mouseWorldPosition.z = 0f;
+
         if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
         {
             targetPosition = mouseWorldPosition;
@@ -104,17 +105,18 @@ public class PlayerCombate : MonoBehaviour
         canDash = false;
         isDashing = true;
         float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0;
+        rb.gravityScale = 10;
         Vector3 dashDirection = (mouseWorldPosition - transform.position).normalized;
+        dashDirection.z = 0f;
         rb.velocity = dashDirection * dashingPower;
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
         animator.SetBool("Golpe", false); 
         tr.emitting = false;
         isDashing = false;
+        rb.gravityScale = originalGravity;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
-        rb.gravityScale = originalGravity;
     }
 
     private void OnDrawGizmos()
