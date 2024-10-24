@@ -39,7 +39,7 @@ public class MovimientoEnemigo : MonoBehaviour
 
     private bool jugadorAtras;
 
-    private bool vivo;
+    private bool vivo = true;
 
     // Start is called before the first frame update
     private void Start()
