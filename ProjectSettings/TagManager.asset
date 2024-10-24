@@ -14,7 +14,7 @@ TagManager:
   - UI
   - Piso
   - Pared Deslizante
-  - 
+  - Plataforma
   - 
   - 
   - 
@@ -50,6 +50,9 @@ TagManager:
     locked: 0
   - name: Jugador
     uniqueID: 2394002419
+    locked: 0
+  - name: Mapa Adelante del jugador
+    uniqueID: 1647297771
     locked: 0
   - name: Efecto
     uniqueID: 2278491375
