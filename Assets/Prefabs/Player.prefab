@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 7897787851511257600}
   - component: {fileID: 904702183655475801}
   - component: {fileID: 417729550664278323}
-  - component: {fileID: 6510543190532738393}
   - component: {fileID: 8337596445475814966}
   - component: {fileID: 7435985368946640113}
   - component: {fileID: 8953539368808683950}
@@ -224,41 +223,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6510543190532738393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4739273338179296933}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7776c2e5f7d34d4c9217657d156d28f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocidadDeMovimiento: 600
-  suavisadoDeMovimiento: 0
-  fuerzaDeSalto: 1200
-  Suelo:
-    serializedVersion: 2
-    m_Bits: 64
-  controladorSuelo: {fileID: 695884167917122052}
-  dimensionesCajaSalto: {x: 0.83, y: 0.23, z: 0}
-  multiplicadorCancelarSalto: 0.1
-  multiplicadorDeGravedad: 1.5
-  controladorPared: {fileID: 1200343812830985941}
-  controladorEspaldaPared: {fileID: 389483987727956400}
-  Pared:
-    serializedVersion: 2
-    m_Bits: 128
-  dimensionesCajaPared: {x: 0.05, y: 0.95, z: 0}
-  velocidadDeslizar: 1
-  fuerzaSaltoParedX: 15
-  fuerzaSaltoParedY: 20
-  tiempoSaltoPared: 0.2
-  fuerzaSalto: 0.7
-  distanciaEsquive: 18
-  cooldownEsquive: 0.3
 --- !u!114 &8337596445475814966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,9 +256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 600
-  Plataforma:
-    serializedVersion: 2
-    m_Bits: 0
   fuerzaDeSalto: 1050
   Suelo:
     serializedVersion: 2

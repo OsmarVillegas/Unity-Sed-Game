@@ -95,7 +95,7 @@ public class PlayerCombate : MonoBehaviour
         {
             if (colisionador.CompareTag("Enemigo"))
             {
-                colisionador.transform.GetComponent<Enemigo>().TomarDaño(dañoGolpe);
+                colisionador.transform.GetComponent<EnemigoEstandar>().TomarDaño(dañoGolpe);
             }
         }
     }
