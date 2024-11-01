@@ -14,6 +14,8 @@ public class Enemigo : Entidad
 
     protected bool mirandoLaDerecha = true;
 
+    [SerializeField] private ParticleSystem particulas;
+
     public void TomarDaño(float daño)
     {
         vida -= daño;
@@ -28,6 +30,7 @@ public class Enemigo : Entidad
     {
         animator.SetTrigger("Muerte");
         estaVivo = false;
+        particulas.Play();
     }
 
     public void Girar()

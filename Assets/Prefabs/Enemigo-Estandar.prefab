@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 48370283156798964}
   - component: {fileID: 7262554095193296152}
   - component: {fileID: 5818522786765737243}
-  - component: {fileID: 2621342044059623402}
   - component: {fileID: 8554048404947207851}
   m_Layer: 0
   m_Name: Enemigo-Estandar
@@ -215,19 +214,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2621342044059623402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3239648572546292126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81e2a699240b71e4a89507ee88d3e2a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vida: 1
 --- !u!114 &8554048404947207851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,7 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 144aea05a9233294bab923722de15d14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vida: 0
   velocidadDeMovimiento: 2
+  estaVivo: 1
+  controladorAbajo: {fileID: 388586807438709501}
+  controladorEnFrente: {fileID: 4369076795862755105}
   capaAbajo:
     serializedVersion: 2
     m_Bits: 64
@@ -249,8 +239,17 @@ MonoBehaviour:
     m_Bits: 192
   distanciaAbajo: 1.53
   distanciaEnFrente: 1.84
-  controladorAbajo: {fileID: 388586807438709501}
-  controladorEnFrente: {fileID: 4369076795862755105}
+  GizmosJugador: 0
+  detectionCollider: {fileID: 0}
+  controladorEspaldaJugador: {fileID: 0}
+  controladorEnFrenteJugador: {fileID: 0}
+  capaJugador:
+    serializedVersion: 2
+    m_Bits: 0
+  distanciaEnFrenteJugador: 0
+  distanciaEspaldaJugador: 0
+  controladorDanio: {fileID: 0}
+  tamanioDanio: {x: 0, y: 0}
 --- !u!1 &6603970768763684861
 GameObject:
   m_ObjectHideFlags: 0

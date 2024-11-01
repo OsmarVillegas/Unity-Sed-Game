@@ -39,43 +39,52 @@ public class PlayerCombate : MonoBehaviour
 
     private Animator animator;
 
+    [Header("Muerte")]
+
+    private PlayerControllerV2 playerControllerV2;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("Golpe", false);
+        playerControllerV2 = GetComponent<PlayerControllerV2>();
+
     }
 
     private void Update(){
 
-        if (isDashing)
+        if (playerControllerV2.estaVivo)
         {
-            return;
+
+            if (isDashing)
+            {
+                return;
+            }
+
+            if (Input.GetButtonDown("Fire1") && canDash)
+            {
+                Golpe();
+                StartCoroutine(Dash());
+            }
+
+            mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mouseWorldPosition.z = 0f;
+
+            if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
+            {
+                targetPosition = mouseWorldPosition;
+            }
+            else
+            {
+                Vector3 direction = (mouseWorldPosition - transform.position).normalized;
+                targetPosition = transform.position + direction * maxDistanceFromPlayer;
+            }
+
+            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+
+            controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
         }
-
-        if (Input.GetButtonDown("Fire1") && canDash)
-        {
-            Golpe();
-            StartCoroutine(Dash());
-        }
-
-        mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mouseWorldPosition.z = 0f;
-
-        if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
-        {
-            targetPosition = mouseWorldPosition;
-        }
-        else
-        {
-            Vector3 direction = (mouseWorldPosition - transform.position).normalized;
-            targetPosition = transform.position + direction * maxDistanceFromPlayer;
-        }
-
-        float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-
-        controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
-
     }
 
     private void FixedUpdate()

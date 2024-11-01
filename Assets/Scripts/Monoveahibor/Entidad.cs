@@ -5,4 +5,6 @@ using UnityEngine;
 public class Entidad : MonoBehaviour
 {
     public float vida;
+
+    public float danio;
 }

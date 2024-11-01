@@ -29,6 +29,8 @@ public class EnemigoEstandar : Enemigo
 
     private int girarAleatorio;
 
+    private BoxCollider2D boxCollider;
+
     [Header("Detectar Jugador")]
 
     [SerializeField] private bool GizmosJugador = false;
@@ -39,7 +41,7 @@ public class EnemigoEstandar : Enemigo
 
     [SerializeField] private Transform controladorEnFrenteJugador;
 
-    [SerializeField] private LayerMask capaEnfrenteJugador;
+    [SerializeField] private LayerMask capaJugador;
 
     [SerializeField] private float distanciaEnFrenteJugador;
 
@@ -47,11 +49,42 @@ public class EnemigoEstandar : Enemigo
 
     private bool jugadorDetectado = false;
 
+    private float velocidadOriginal;
+
+    [Header("Ataque")]
+
+    [SerializeField] private Transform controladorDanio;
+
+    [SerializeField] private Vector2 tamanioDanio;
+
+    private bool estaEnArea;
+
+    [SerializeField] private float tiempoAntesDeAtaque;
+
+    [SerializeField] private float duracionAtaque;
+
+    [SerializeField] private float coolDownAtaque;
+
+    private bool estaAtacando = false;
+
+    private bool puedeAtacar;
+
+    private VidaJugador vidaJugador;
+
+    private PlayerControllerV2 playerController;
+
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        boxCollider = GetComponent<BoxCollider2D>();
+        GameObject jugador = GameObject.FindWithTag("Player");
+        vidaJugador = jugador.GetComponent<VidaJugador>();
+        playerController = jugador.GetComponent<PlayerControllerV2>();
+
         detectionCollider.enabled = false;
+        velocidadOriginal = velocidadDeMovimiento;
+        puedeAtacar = true;
 
         StartCoroutine(ComportamientoEnemigo());
         StartCoroutine(DetectarJugador());
@@ -77,29 +110,34 @@ public class EnemigoEstandar : Enemigo
         }
         else if(!estaVivo){
             Detenerse();
+            jugadorDetectado = false;
+            detectionCollider.enabled = false;
+            Destroy(boxCollider);
+            StartCoroutine(DestruirEnemigo());
         }
+    }
 
+    private IEnumerator DestruirEnemigo()
+    {
+        yield return new WaitForSeconds(7);
+
+        Destroy(gameObject);
     }
 
 
     private IEnumerator DetectarJugador()
     {
         while (true) { 
-            RaycastHit2D hit = Physics2D.Raycast(controladorEnFrenteJugador.position, transform.right, distanciaEnFrenteJugador, capaEnfrenteJugador);
+            RaycastHit2D hit = Physics2D.Raycast(controladorEnFrenteJugador.position, transform.right, distanciaEnFrenteJugador, capaJugador);
 
             if (hit.collider != null)
             {
                 if (hit.collider.CompareTag("Player"))
                 {
-                    Debug.Log("Objeto con el tag Player detectado.");
                     detectionCollider.enabled = true;
                     jugadorDetectado = true;
                 }
 
-            }
-            else
-            {
-                Debug.Log("No se detectó ningún objeto.");
             }
 
             yield return null;
@@ -166,21 +204,56 @@ public class EnemigoEstandar : Enemigo
         }
         else
         {
-            Gizmos.color = Color.red;
+            Gizmos.color = Color.blue;
             Gizmos.DrawLine(controladorAbajo.transform.position, controladorAbajo.transform.position + transform.up * -1 * distanciaAbajo);
             Gizmos.DrawLine(controladorEnFrente.transform.position, controladorEnFrente.transform.position + transform.right * distanciaEnFrente);
         }
+
+
+        if (estaEnArea)
+        {
+            Gizmos.color = Color.red;
+        }
+        else
+        {
+            Gizmos.color = Color.gray;
+        }
+
+        Gizmos.DrawWireCube(controladorDanio.position, tamanioDanio);
+
+
     }
 
+    private IEnumerator Golpear()
+    {
+        yield return new WaitForSeconds(tiempoAntesDeAtaque);
 
+        print("Golpeando...");
+        animator.SetBool("Golpe", true);
+        estaAtacando = true;
 
+        yield return new WaitForSeconds(duracionAtaque);
 
+        RaycastHit2D hit = Physics2D.Raycast(controladorEnFrente.position, transform.right, distanciaEnFrente - 0.6f, capaJugador);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Player"))
+            {
+                vidaJugador.TomarDanio(new Vector2(transform.position.x, transform.position.y).normalized);
+            }
+        }
+
+        estaAtacando = false;
+        animator.SetBool("Golpe", false);
+        yield return new WaitForSeconds(coolDownAtaque);
+        puedeAtacar = true;
+    }
 
     void OnTriggerStay2D(Collider2D player)
     {
         if (player.CompareTag("Player"))
         {
-
             // Obtener la posición del jugador
             Vector3 playerPosition = player.transform.position;
 
@@ -197,14 +270,51 @@ public class EnemigoEstandar : Enemigo
             }
 
             // Aplicar velocidad para mover el objeto hacia la posición X del jugador
+            informacionEnFrente = Physics2D.Raycast(controladorEnFrente.position, transform.right, distanciaEnFrente, capaEnfrente);
 
             rb2D.velocity = new Vector2(velocidadDeMovimiento * 2, rb2D.velocity.y);
 
-            animator.SetFloat("Horizontal", Mathf.Abs(velocidadDeMovimiento));
+            RaycastHit2D hit = Physics2D.Raycast(controladorEnFrente.position, transform.right, distanciaEnFrente - 1, capaJugador);
 
-            print("Jugador Detectado");
-            print(informacionEnFrente);
-            print(informacionAbajo);
+            bool jugadorEnArea = false;
+
+            if (hit.collider != null)
+            {
+                if(hit.collider.CompareTag("Player"))
+                {
+                    jugadorEnArea = true;
+                    estaEnArea = true;
+                    if (puedeAtacar && playerController.estaVivo)
+                    {
+                        puedeAtacar = false;
+                        StartCoroutine(Golpear());
+                    }
+                }
+            }
+            else
+            {
+                estaEnArea = false;
+            }
+
+            if (informacionEnFrente || jugadorEnArea || !puedeAtacar || !playerController.estaVivo)
+            {
+                velocidadDeMovimiento = 0;
+            }
+            else
+            {
+                if(mirandoLaDerecha)
+                {
+                    velocidadDeMovimiento = velocidadOriginal;
+                }
+
+                if (!mirandoLaDerecha)
+                {
+                    velocidadDeMovimiento = velocidadOriginal * -1;
+                }
+
+            }
+
+            animator.SetFloat("Horizontal", Mathf.Abs(velocidadDeMovimiento));
         }
 
     }
@@ -213,10 +323,5 @@ public class EnemigoEstandar : Enemigo
     {
         jugadorDetectado = false;
         detectionCollider.enabled = false;
-        if (player.CompareTag("Player"))
-        {
-            Debug.Log("El jugador ha salido del trigger");
-
-        }
     }
 }
