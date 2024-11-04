@@ -35,5 +35,10 @@ public class MenuPausa : MonoBehaviour {
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
-  
+  public void VolverMenuPrincipal(){
+    juegoPausado = false;
+    Time.timeScale = 1f;
+    SceneManager.LoadScene("MenuInicial");
+  }
+
 }
