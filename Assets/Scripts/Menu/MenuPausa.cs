@@ -10,6 +10,7 @@ public class MenuPausa : MonoBehaviour {
       if(juegoPausado){
         Reanudar();
       }else{
+        
         Pausa();
       }
     }
@@ -20,6 +21,7 @@ public class MenuPausa : MonoBehaviour {
     Time.timeScale = 0f;
     botonPausa.SetActive(false);
     menuPausa.SetActive(true);
+    Debug.Log("Click");
   }
 
   public void Reanudar(){
