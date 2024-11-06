@@ -43,7 +43,7 @@ public class MenuPausa : MonoBehaviour {
     Time.timeScale = 1f;
     botonPausa.SetActive(true);
     menuPausa.SetActive(false);
-    SceneManager.LoadScene("MenuInicial");
+    SceneManager.LoadScene("MenuEleccionNivel");
   }
 
 }
