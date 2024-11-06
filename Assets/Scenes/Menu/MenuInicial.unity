@@ -295,18 +295,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590500483}
     m_Modifications:
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_text
-      value: opciones
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_fontStyle
-      value: 17
-      objectReference: {fileID: 0}
     - target: {fileID: 785208781587179876, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_Name
       value: Boton (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1743903326501770359, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1715615318}
     - target: {fileID: 5006823426268656297, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -385,22 +381,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006823426268656297, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
-      propertyPath: m_text
-      value: OPCIONES
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
-    - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 3054768690659065674, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
-    - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
-      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -704,22 +684,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590500483}
     m_Modifications:
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_text
-      value: SALIR
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_isRightToLeft
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_TextStyleHashCode
-      value: -1183493901
-      objectReference: {fileID: 0}
     - target: {fileID: 785208781587179876, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_Name
       value: Boton (2)
@@ -827,6 +791,22 @@ PrefabInstance:
     - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_text
+      value: SALIR
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -980,22 +960,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1590500483}
     m_Modifications:
-    - target: {fileID: 1743903326501770359, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1715615317}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_text
-      value: PARTIDA NUEVA
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_margin.z
-      value: -0.00024414062
-      objectReference: {fileID: 0}
-    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
-      propertyPath: m_fontStyle
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 785208781587179876, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_Name
       value: Boton
@@ -1104,6 +1068,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7825412725913983465, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825412725913983465, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1944572932, guid: 3a943830634829a4e95ba8892146a44d, type: 3}
+    - target: {fileID: 7825412725913983465, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_Color.b
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825412725913983465, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_Color.g
+      value: 0.31764707
+      objectReference: {fileID: 0}
+    - target: {fileID: 7825412725913983465, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
+      propertyPath: m_Color.r
+      value: 0.31764707
+      objectReference: {fileID: 0}
     - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_text
       value: PARTIDA NUEVA
@@ -1119,6 +1103,22 @@ PrefabInstance:
     - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1743903326501770359, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1715615317}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_text
+      value: PARTIDA NUEVA
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_margin.z
+      value: -0.00024414062
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986051084413197120, guid: f890e5d78f17971489e6e8237ae98e26, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -10,7 +10,6 @@ public class MenuPausa : MonoBehaviour {
       if(juegoPausado){
         Reanudar();
       }else{
-        
         Pausa();
       }
     }
@@ -34,12 +33,16 @@ public class MenuPausa : MonoBehaviour {
   public void Reiniciar(){
     juegoPausado = false;
     Time.timeScale = 1f;
+    botonPausa.SetActive(true);
+    menuPausa.SetActive(false);
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
   public void VolverMenuPrincipal(){
     juegoPausado = false;
     Time.timeScale = 1f;
+    botonPausa.SetActive(true);
+    menuPausa.SetActive(false);
     SceneManager.LoadScene("MenuInicial");
   }
 

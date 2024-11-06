@@ -5,6 +5,10 @@ public class MenuInicialSc : MonoBehaviour {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
   }
 
+  public void Opciones(){
+    SceneManager.LoadScene("MenuEleccionNivel");
+  }
+
   public void Salir(){
     Debug.Log("Saliendo...");
     Application.Quit();
