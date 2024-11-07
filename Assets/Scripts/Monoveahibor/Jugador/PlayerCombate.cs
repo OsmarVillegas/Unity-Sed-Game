@@ -19,6 +19,8 @@ public class PlayerCombate : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    private bool enemigoDetectado = false;
+
     [Header("Dash")]
 
     [SerializeField] private float dashingPower;
@@ -49,7 +51,6 @@ public class PlayerCombate : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("Golpe", false);
         playerControllerV2 = GetComponent<PlayerControllerV2>();
-
     }
 
     private void Update(){
@@ -84,6 +85,7 @@ public class PlayerCombate : MonoBehaviour
             float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
 
             controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
+
         }
     }
 
@@ -97,12 +99,11 @@ public class PlayerCombate : MonoBehaviour
 
     private void Golpe()
     {
-
         Collider2D[] objetos = Physics2D.OverlapCircleAll(controladorGolpe.position, radioGolpe);
 
         foreach (Collider2D colisionador in objetos)
         {
-            if (colisionador.CompareTag("Enemigo"))
+            if (colisionador.CompareTag("Enemigo") && !colisionador.isTrigger)
             {
                 colisionador.transform.GetComponent<EnemigoEstandar>().TomarDaño(dañoGolpe);
             }
@@ -130,7 +131,7 @@ public class PlayerCombate : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.gray;
         Gizmos.DrawWireSphere(controladorGolpe.position, radioGolpe);
     }
 }

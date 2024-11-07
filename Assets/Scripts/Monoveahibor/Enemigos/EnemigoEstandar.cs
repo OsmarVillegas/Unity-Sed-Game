@@ -65,8 +65,6 @@ public class EnemigoEstandar : Enemigo
 
     [SerializeField] private float coolDownAtaque;
 
-    private bool estaAtacando = false;
-
     private bool puedeAtacar;
 
     private VidaJugador vidaJugador;
@@ -106,7 +104,7 @@ public class EnemigoEstandar : Enemigo
                     Detenerse();
                     break;
             }
-            print("Comportamiento Default Activado");
+            //print("Comportamiento Default Activado");
         }
         else if(!estaVivo){
             Detenerse();
@@ -128,11 +126,23 @@ public class EnemigoEstandar : Enemigo
     private IEnumerator DetectarJugador()
     {
         while (true) { 
-            RaycastHit2D hit = Physics2D.Raycast(controladorEnFrenteJugador.position, transform.right, distanciaEnFrenteJugador, capaJugador);
+            RaycastHit2D hitEnFrente = Physics2D.Raycast(controladorEnFrenteJugador.position, transform.right, distanciaEnFrenteJugador, capaJugador);
 
-            if (hit.collider != null)
+            if (hitEnFrente.collider != null)
             {
-                if (hit.collider.CompareTag("Player"))
+                if (hitEnFrente.collider.CompareTag("Player"))
+                {
+                    detectionCollider.enabled = true;
+                    jugadorDetectado = true;
+                }
+
+            }
+
+            RaycastHit2D hitEspalda = Physics2D.Raycast(controladorEspaldaJugador.position, transform.right * -1, distanciaEspaldaJugador, capaJugador);
+
+            if (hitEspalda.collider != null)
+            {
+                if (hitEspalda.collider.CompareTag("Player"))
                 {
                     detectionCollider.enabled = true;
                     jugadorDetectado = true;
@@ -151,14 +161,14 @@ public class EnemigoEstandar : Enemigo
             if (!jugadorDetectado) { 
                 comportamientoAleatorio = Random.Range(0, 3);
 
-                if (comportamientoAleatorio >= 0 && comportamientoAleatorio <= 1)
-                {
-                    print("Patrullando...");
-                }
-                else
-                {
-                    print("Esperando...");
-                }
+                //if (comportamientoAleatorio >= 0 && comportamientoAleatorio <= 1)
+                //{
+                //    print("Patrullando...");
+                //}
+                //else
+                //{
+                //    print("Esperando...");
+                //}
 
                 yield return new WaitForSeconds(5f);
 
@@ -172,7 +182,7 @@ public class EnemigoEstandar : Enemigo
                 yield return new WaitForSeconds(5f);
             }
         }
-        print("Comportamiento detenido");
+        //print("Comportamiento detenido");
 
     }
 
@@ -201,6 +211,7 @@ public class EnemigoEstandar : Enemigo
         {
             Gizmos.color = Color.yellow;
             Gizmos.DrawLine(controladorEnFrenteJugador.transform.position, controladorEnFrenteJugador.transform.position + transform.right * distanciaEnFrenteJugador);
+            Gizmos.DrawLine(controladorEspaldaJugador.transform.position, controladorEnFrenteJugador.transform.position + transform.right * -1 * distanciaEspaldaJugador);
         }
         else
         {
@@ -228,12 +239,18 @@ public class EnemigoEstandar : Enemigo
     {
         yield return new WaitForSeconds(tiempoAntesDeAtaque);
 
-        print("Golpeando...");
+        //print("Golpeando...");
         animator.SetBool("Golpe", true);
-        estaAtacando = true;
 
         yield return new WaitForSeconds(duracionAtaque);
 
+        animator.SetBool("Golpe", false);
+        yield return new WaitForSeconds(coolDownAtaque);
+        puedeAtacar = true;
+    }
+
+    private void Danio()
+    {
         RaycastHit2D hit = Physics2D.Raycast(controladorEnFrente.position, transform.right, distanciaEnFrente - 0.6f, capaJugador);
 
         if (hit.collider != null)
@@ -243,11 +260,6 @@ public class EnemigoEstandar : Enemigo
                 vidaJugador.TomarDanio(new Vector2(transform.position.x, transform.position.y).normalized);
             }
         }
-
-        estaAtacando = false;
-        animator.SetBool("Golpe", false);
-        yield return new WaitForSeconds(coolDownAtaque);
-        puedeAtacar = true;
     }
 
     void OnTriggerStay2D(Collider2D player)

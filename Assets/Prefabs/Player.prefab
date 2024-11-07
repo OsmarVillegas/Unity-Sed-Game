@@ -46,8 +46,9 @@ GameObject:
   - component: {fileID: 417729550664278323}
   - component: {fileID: 8337596445475814966}
   - component: {fileID: 7435985368946640113}
+  - component: {fileID: 5832749084782554565}
   - component: {fileID: 8953539368808683950}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -191,10 +192,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.45906138, y: -1.1208582}
-      - {x: 0.23, y: 1.15}
-      - {x: -0.09, y: 1.14}
-      - {x: -0.52151036, y: -1.1251025}
+    - - {x: 0.2617538, y: -1.1156654}
+      - {x: 0.32346198, y: 0.45423067}
+      - {x: -0.1419228, y: 0.47019207}
+      - {x: -0.37093285, y: -1.114718}
   m_UseDelaunayMesh: 0
 --- !u!50 &417729550664278323
 Rigidbody2D:
@@ -279,6 +280,20 @@ MonoBehaviour:
   cooldownEsquive: 0.4
   fuerzaEsquive: 20
   dashingTime: 0.15
+  estaVivo: 0
+  velocidadRebote: {x: 10, y: 10}
+--- !u!114 &5832749084782554565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739273338179296933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61b2891b3796f8c4580b03ae7f41583d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!96 &8953539368808683950
 TrailRenderer:
   serializedVersion: 3
@@ -318,8 +333,8 @@ TrailRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1900964877
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Time: 0.5
   m_PreviewTimeScale: 1

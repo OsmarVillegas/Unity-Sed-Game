@@ -42,7 +42,6 @@ public class PlayerControllerV2 : MonoBehaviour
     private bool espaldaPared;
     private bool saltoDePared;
     private bool saltoDeParedVerificadorCondicional;
-    private bool seRealizaSalto;
 
     [Header("Esquivando")]
     [SerializeField] private float tiempoEsquive;
@@ -173,7 +172,6 @@ public class PlayerControllerV2 : MonoBehaviour
             espaldaPared = Physics2D.OverlapBox(controladorEspaldaPared.position, dimensionesCajaPared, 0f, Pared);
             if (!espaldaPared)
             {
-                seRealizaSalto = true;
                 SaltoPared();
             }
             else
@@ -271,7 +269,6 @@ public class PlayerControllerV2 : MonoBehaviour
         saltoDePared = true;
         yield return new WaitForSeconds(tiempoSaltoPared);
         saltoDePared = false;
-        seRealizaSalto = false;
     }
 
     IEnumerator Esquive()
@@ -279,6 +276,7 @@ public class PlayerControllerV2 : MonoBehaviour
         esquivando = true;
         puedeEsquivar = false;
         animator.SetBool("Esquivando", esquivando);
+        Physics2D.IgnoreLayerCollision(9, 10, true);
 
         if (!mirandoDerecha)
         {
@@ -293,6 +291,7 @@ public class PlayerControllerV2 : MonoBehaviour
 
         esquivando = false;
         animator.SetBool("Esquivando", esquivando);
+        Physics2D.IgnoreLayerCollision(9, 10, false);
 
         yield return new WaitForSeconds(cooldownEsquive);
         puedeEsquivar = true;

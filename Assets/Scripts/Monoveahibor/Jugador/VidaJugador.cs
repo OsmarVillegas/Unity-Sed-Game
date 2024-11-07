@@ -21,6 +21,7 @@ public class VidaJugador : MonoBehaviour
     {
         animator.SetTrigger("Muerte");
         movimientoJugador.estaVivo = false;
+        Physics2D.IgnoreLayerCollision(9, 10, true);
         movimientoJugador.Rebote(posicion);
     }
 }
