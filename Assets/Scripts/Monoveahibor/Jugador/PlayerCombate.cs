@@ -19,8 +19,6 @@ public class PlayerCombate : MonoBehaviour
 
     private Vector3 targetPosition;
 
-    private bool enemigoDetectado = false;
-
     [Header("Dash")]
 
     [SerializeField] private float dashingPower;

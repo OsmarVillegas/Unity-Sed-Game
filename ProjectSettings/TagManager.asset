@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemigo
   - Plataforma
+  - BarraDeTiempo
   layers:
   - Default
   - TransparentFX
