@@ -240,6 +240,8 @@ MonoBehaviour:
   radioGolpe: 2
   "da\xF1oGolpe": 10
   maxDistanceFromPlayer: 3
+  administradorTutorial: {fileID: 0}
+  tutorialFinalizado: 0
   dashingPower: 22
   dashingTime: 0.2
   dashingCooldown: 0.6
@@ -257,6 +259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadDeMovimiento: 600
+  administradorTutorial: {fileID: 0}
+  tutorialFinalizado: 0
   fuerzaDeSalto: 1050
   Suelo:
     serializedVersion: 2
@@ -294,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b2891b3796f8c4580b03ae7f41583d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barraDeTiempo: {fileID: 0}
 --- !u!96 &8953539368808683950
 TrailRenderer:
   serializedVersion: 3

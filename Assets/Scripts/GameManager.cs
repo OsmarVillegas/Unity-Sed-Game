@@ -9,8 +9,6 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-
-
         if (barraDeTiempo != null)
         {
             // Suscribirse al evento de finalización de tiempo del Timer

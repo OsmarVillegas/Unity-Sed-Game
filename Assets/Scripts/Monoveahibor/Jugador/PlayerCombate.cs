@@ -19,6 +19,9 @@ public class PlayerCombate : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    [SerializeField] private AdministradorDeTutorial administradorTutorial;
+    [SerializeField] private bool tutorialFinalizado = false;
+
     [Header("Dash")]
 
     [SerializeField] private float dashingPower;
@@ -32,7 +35,7 @@ public class PlayerCombate : MonoBehaviour
     private Rigidbody2D rb;
 
     private Vector2 dashDirection;
-    
+
     private bool isDashing;
 
     private bool canDash = true;
@@ -49,40 +52,48 @@ public class PlayerCombate : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetBool("Golpe", false);
         playerControllerV2 = GetComponent<PlayerControllerV2>();
+
+        administradorTutorial.TutorialSaltado += ActivarMovimiento;
     }
 
-    private void Update(){
+    private void Update()
+    {
 
-        if (playerControllerV2.estaVivo)
+        if (tutorialFinalizado)
         {
 
-            if (isDashing)
+            if (playerControllerV2.estaVivo)
             {
-                return;
+
+                if (isDashing)
+                {
+                    return;
+                }
+
+                if (Input.GetButtonDown("Fire1") && canDash)
+                {
+                    Golpe();
+                    StartCoroutine(Dash());
+                }
+
+                mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                mouseWorldPosition.z = 0f;
+
+                if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
+                {
+                    targetPosition = mouseWorldPosition;
+                }
+                else
+                {
+                    Vector3 direction = (mouseWorldPosition - transform.position).normalized;
+                    targetPosition = transform.position + direction * maxDistanceFromPlayer;
+                }
+
+                float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
+
+                controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
+
             }
-
-            if (Input.GetButtonDown("Fire1") && canDash)
-            {
-                Golpe();
-                StartCoroutine(Dash());
-            }
-
-            mouseWorldPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            mouseWorldPosition.z = 0f;
-
-            if (Vector3.Distance(transform.position, mouseWorldPosition) <= maxDistanceFromPlayer)
-            {
-                targetPosition = mouseWorldPosition;
-            }
-            else
-            {
-                Vector3 direction = (mouseWorldPosition - transform.position).normalized;
-                targetPosition = transform.position + direction * maxDistanceFromPlayer;
-            }
-
-            float distanceToTarget = Vector3.Distance(transform.position, targetPosition);
-
-            controladorGolpe.transform.position = Vector3.MoveTowards(transform.position, targetPosition, distanceToTarget);
 
         }
     }
@@ -93,6 +104,11 @@ public class PlayerCombate : MonoBehaviour
         {
             return;
         }
+    }
+
+    private void ActivarMovimiento()
+    {
+        tutorialFinalizado = true;
     }
 
     private void Golpe()
@@ -119,7 +135,7 @@ public class PlayerCombate : MonoBehaviour
         rb.velocity = dashDirection * dashingPower;
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
-        animator.SetBool("Golpe", false); 
+        animator.SetBool("Golpe", false);
         tr.emitting = false;
         isDashing = false;
         rb.gravityScale = originalGravity;

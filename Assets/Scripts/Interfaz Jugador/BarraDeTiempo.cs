@@ -12,6 +12,8 @@ public class BarraDeTiempo : MonoBehaviour
     private float tiempoRestante;
     private Slider slider;
 
+    [SerializeField] private AdministradorDeTutorial administradorTutorial;
+
     public event Action OnTimeExpired;
 
     // Start is called before the first frame update
@@ -21,7 +23,11 @@ public class BarraDeTiempo : MonoBehaviour
         slider.maxValue = segundos;
         tiempoRestante = segundos;
         slider.value = tiempoRestante;
+
+        administradorTutorial.TutorialSaltado += ActivarMovimiento;
     }
+
+
 
     // Update is called once per frame
     void Update()
@@ -39,6 +45,10 @@ public class BarraDeTiempo : MonoBehaviour
                 OnTimeExpired?.Invoke();
             }
         }
+    }
+    private void ActivarMovimiento()
+    {
+        activarTimer = true;
     }
 
     public float GetTiempoRestante()

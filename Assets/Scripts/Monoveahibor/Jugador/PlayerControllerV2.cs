@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +12,10 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] private float velocidadDeMovimiento;
     private float movimientoHorizontal = 0f;
     private bool mirandoDerecha;
-
     private bool enPlataforma;
+
+    [SerializeField] private AdministradorDeTutorial administradorTutorial;
+    [SerializeField] private bool tutorialFinalizado = false;
 
     [Header("Salto")]
     [SerializeField] private float fuerzaDeSalto;
@@ -51,7 +54,7 @@ public class PlayerControllerV2 : MonoBehaviour
     private bool puedeEsquivar = true;
 
     [Header("Ataque")]
-    [SerializeField]private float dashingTime;
+    [SerializeField] private float dashingTime;
     private bool atacando;
 
 
@@ -59,6 +62,7 @@ public class PlayerControllerV2 : MonoBehaviour
     [SerializeField] public bool estaVivo;
     private float sePuedeRebotar;
     [SerializeField] private Vector2 velocidadRebote;
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,66 +72,74 @@ public class PlayerControllerV2 : MonoBehaviour
         estaVivo = true;
 
         escalaGravedadNormal = rb2d.gravityScale;
+
+        administradorTutorial.TutorialSaltado += ActivarMovimiento;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (estaVivo) {
-            // Movimiento lateral
-            movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento * Time.fixedDeltaTime;
-
-            // atacar
-            if (Input.GetButtonDown("Fire1"))
+        if (tutorialFinalizado)
+        {
+            if (estaVivo)
             {
-                atacando = true;
-                StartCoroutine(AtaqueDash());
-            }
+                // Movimiento lateral
+                movimientoHorizontal = Input.GetAxisRaw("Horizontal") * velocidadDeMovimiento * Time.fixedDeltaTime;
 
-            // Saltar
-            if (Input.GetButtonDown("Jump"))
-            {
-                if (enSuelo)
+                // atacar
+                if (Input.GetButtonDown("Fire1"))
                 {
-                    salto = true;
+                    atacando = true;
+                    StartCoroutine(AtaqueDash());
                 }
 
-                if (enPared)
+                // Saltar
+                if (Input.GetButtonDown("Jump"))
                 {
-                    saltoDeParedVerificadorCondicional = true;
+                    if (enSuelo)
+                    {
+                        salto = true;
+                    }
+
+                    if (enPared)
+                    {
+                        saltoDeParedVerificadorCondicional = true;
+                    }
                 }
-            }
-            if (Input.GetButtonUp("Jump"))
-            {
-                SaltoVariable();
-            }
-
-            // Deslizar
-            if (!enSuelo && enPared)
-            {
-                deslizando = true;
-            }
-            else
-            {
-                deslizando = false;
-            }
-
-            // Esquivar
-            if (Input.GetButtonDown("Esquivar") && puedeEsquivar && enSuelo && !enPlataforma)
-            {
-                Collider2D colisionador = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
-
-                if (!colisionador.CompareTag("Plataforma"))
+                if (Input.GetButtonUp("Jump"))
                 {
-                    StartCoroutine(Esquive());
+                    SaltoVariable();
+                }
+
+                // Deslizar
+                if (!enSuelo && enPared)
+                {
+                    deslizando = true;
+                }
+                else
+                {
+                    deslizando = false;
+                }
+
+                // Esquivar
+                if (Input.GetButtonDown("Esquivar") && puedeEsquivar && enSuelo && !enPlataforma)
+                {
+                    Collider2D colisionador = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
+
+                    if (!colisionador.CompareTag("Plataforma"))
+                    {
+                        StartCoroutine(Esquive());
+                    }
                 }
             }
 
             animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
             animator.SetFloat("VelocidadY", rb2d.velocity.y);
-            animator.SetBool("enSuelo", enSuelo);
             animator.SetBool("Deslizando", deslizando);
         }
+
+        animator.SetBool("enSuelo", enSuelo);
+
     }
 
     private void FixedUpdate()
@@ -136,13 +148,14 @@ public class PlayerControllerV2 : MonoBehaviour
         enSuelo = Physics2D.OverlapBox(controladorSuelo.position, dimensionesCajaSalto, 0f, Suelo);
 
         // Movimiento
-        if (!saltoDePared && !atacando && !esquivando && estaVivo) { 
+        if (!saltoDePared && !atacando && !esquivando && estaVivo)
+        {
             rb2d.velocity = new Vector2(movimientoHorizontal, rb2d.velocity.y);
         }
 
         if (!estaVivo)
         {
-            rb2d.velocity = new Vector2(0,0);
+            rb2d.velocity = new Vector2(0, 0);
             animator.SetFloat("Horizontal", 0);
             animator.SetFloat("VelocidadY", 0);
         }
@@ -162,6 +175,11 @@ public class PlayerControllerV2 : MonoBehaviour
     public void Rebote(Vector2 puntoGolpe)
     {
         rb2d.velocity = new Vector2(-velocidadRebote.x * puntoGolpe.x, velocidadRebote.y);
+    }
+
+    private void ActivarMovimiento()
+    {
+        tutorialFinalizado = true;
     }
 
     private void SaltoDesdePared()
