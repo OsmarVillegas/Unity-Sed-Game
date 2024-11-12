@@ -123,7 +123,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuInicialSc, Assembly-CSharp
-        m_MethodName: Jugar
+        m_MethodName: Opciones
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -198,10 +198,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Partida Nueva
+  m_text: OPCIONES
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19058e90db50c7b47bcee046999cf510, type: 2}
-  m_sharedMaterial: {fileID: 3054768690659065674, guid: 19058e90db50c7b47bcee046999cf510, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
+  m_sharedMaterial: {fileID: 3054768690659065674, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
