@@ -180,6 +180,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Katana-effect-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 0
+        width: 93
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f5bdc39bbb4964c99782d09d021f33
+      internalID: -2056330639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -195,6 +216,7 @@ TextureImporter:
       Katana-effect-Sheet_1: -1594498979
       Katana-effect-Sheet_2: 740916975
       Katana-effect-Sheet_3: -1485411457
+      Katana-effect-Sheet_4: -2056330639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

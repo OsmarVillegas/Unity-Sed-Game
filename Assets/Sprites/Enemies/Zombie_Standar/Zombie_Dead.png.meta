@@ -1,0 +1,387 @@
+fileFormatVersion: 2
+guid: a3dc255e350971344b2f18e83e848ed9
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Zombie_Dead_0
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 9
+        width: 30
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4940344, y: 0.53501576}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d085c2e8a69c8e4cb4adefd220f226a
+      internalID: -1106956574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 9
+        width: 30
+        height: 46
+      alignment: 9
+      pivot: {x: 0.4940346, y: 0.5350158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1fee8588867f2499192fd4d93747bd
+      internalID: -2009639181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_2
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 9
+        width: 30
+        height: 46
+      alignment: 9
+      pivot: {x: 0.48210296, y: 0.5350158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a60159b951f4e84e863a3662b54586f
+      internalID: 688873267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_3
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 9
+        width: 34
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe785dd5e6025340978bcf24e9b59b8
+      internalID: 414420798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_5
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 9
+        width: 47
+        height: 43
+      alignment: 9
+      pivot: {x: 0.7017303, y: 0.5781879}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f58c1b2af6b554e9dbb641bc58ca8d
+      internalID: 792138264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_7
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 9
+        width: 55
+        height: 41
+      alignment: 9
+      pivot: {x: 0.66535145, y: 0.6021232}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a317248c457597440b35343045632a0e
+      internalID: -1134336238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_9
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 9
+        width: 55
+        height: 41
+      alignment: 9
+      pivot: {x: 0.6772971, y: 0.607543}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ecdd3b416e9e1f49a25bd59ef2ebffa
+      internalID: -1236525454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_12
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 9
+        width: 62
+        height: 41
+      alignment: 9
+      pivot: {x: 0.7110635, y: 0.6035467}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740d5348d547aa84d863ab0fac53146d
+      internalID: -416003731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 9
+        width: 57
+        height: 41
+      alignment: 9
+      pivot: {x: 0.80151904, y: 0.59928167}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1122dffacc8633344857101f4e5e3ea9
+      internalID: -1709856031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_16
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 8
+        width: 59
+        height: 42
+      alignment: 9
+      pivot: {x: 0.7725013, y: 0.6019372}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85e6292a6cf0a9e4eafa9615c59ca454
+      internalID: -666533580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_19
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 8
+        width: 63
+        height: 42
+      alignment: 9
+      pivot: {x: 0.7137054, y: 0.6195833}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819e673a6cfdae64faccbd6e291f0904
+      internalID: 1588473511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zombie_Dead_20
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 8
+        width: 63
+        height: 42
+      alignment: 9
+      pivot: {x: 0.77205986, y: 0.6074546}
+      border: {x: 0, y: 1, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68422305601679846956cf24bd573cdb
+      internalID: 1302258301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Zombie_Dead_0: -1106956574
+      Zombie_Dead_1: -2009639181
+      Zombie_Dead_10: 1027394027
+      Zombie_Dead_11: -1329488790
+      Zombie_Dead_12: -416003731
+      Zombie_Dead_13: 310151001
+      Zombie_Dead_14: -1709856031
+      Zombie_Dead_15: -878013208
+      Zombie_Dead_16: -666533580
+      Zombie_Dead_17: -67814590
+      Zombie_Dead_18: 921468804
+      Zombie_Dead_19: 1588473511
+      Zombie_Dead_2: 688873267
+      Zombie_Dead_20: 1302258301
+      Zombie_Dead_3: 414420798
+      Zombie_Dead_4: -1970389363
+      Zombie_Dead_5: 792138264
+      Zombie_Dead_6: -449140449
+      Zombie_Dead_7: -1134336238
+      Zombie_Dead_8: 498688239
+      Zombie_Dead_9: -1236525454
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
