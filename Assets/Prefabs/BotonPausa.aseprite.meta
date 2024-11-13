@@ -121,7 +121,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: Pausa
+  - name: BotonPausa
     originalName: 
     pivot: {x: 0.55172414, y: -0.28125}
     alignment: 9
@@ -132,7 +132,7 @@ ScriptedImporter:
       y: 4
       width: 29
       height: 32
-    spriteID: ef5f8bc2a524ecd4c9fea10b60122c27
+    spriteID: 7237713e865bbd747b1a35a1fd3412c8
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -144,13 +144,13 @@ ScriptedImporter:
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
-    guid: 1056122276
-    name: Pausa
+    guid: -318196668
+    name: BotonPausa
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: Pausa
+    - name: BotonPausa
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -158,7 +158,7 @@ ScriptedImporter:
         y: 9
         width: 29
         height: 32
-      spriteId: ef5f8bc2a524ecd4c9fea10b60122c27
+      spriteId: 7237713e865bbd747b1a35a1fd3412c8
     linkedCells: []
     parentIndex: -1
   platformSettings: []

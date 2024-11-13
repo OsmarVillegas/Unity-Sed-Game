@@ -20,6 +20,7 @@ public class MenuPausa : MonoBehaviour {
     Time.timeScale = 0f;
     botonPausa.SetActive(false);
     menuPausa.SetActive(true);
+    Debug.Log("Click");
   }
 
   public void Reanudar(){
@@ -32,8 +33,17 @@ public class MenuPausa : MonoBehaviour {
   public void Reiniciar(){
     juegoPausado = false;
     Time.timeScale = 1f;
+    botonPausa.SetActive(true);
+    menuPausa.SetActive(false);
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 
-  
+  public void VolverMenuPrincipal(){
+    juegoPausado = false;
+    Time.timeScale = 1f;
+    botonPausa.SetActive(true);
+    menuPausa.SetActive(false);
+    SceneManager.LoadScene("MenuEleccionNivel");
+  }
+
 }
