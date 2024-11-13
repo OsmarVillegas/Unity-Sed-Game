@@ -11,21 +11,21 @@ public class GameManager : MonoBehaviour
     {
         if (barraDeTiempo != null)
         {
-            // Suscribirse al evento de finalización de tiempo del Timer
+            // Suscribirse al evento de finalizaciï¿½n de tiempo del Timer
             barraDeTiempo.OnTimeExpired += TiempoTerminado;
         }
     }
 
     private void TiempoTerminado()
     {
-        // Aquí defines lo que sucede cuando el tiempo se acaba
-        Debug.Log("¡El tiempo ha terminado!");
+        // Aquï¿½ defines lo que sucede cuando el tiempo se acaba
+        Debug.Log("ï¿½El tiempo ha terminado!");
         // Ejemplo: cargar otra escena o mostrar pantalla de fin de nivel
     }
 
     private void OnDestroy()
     {
-        // Asegúrate de desuscribirte del evento para evitar problemas
+        // Asegï¿½rate de desuscribirte del evento para evitar problemas
         if (barraDeTiempo != null)
         {
             barraDeTiempo.OnTimeExpired -= TiempoTerminado;
