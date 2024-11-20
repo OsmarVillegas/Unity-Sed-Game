@@ -102,7 +102,7 @@ TextureImporter:
         serializedVersion: 2
         x: 3
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -121,9 +121,9 @@ TextureImporter:
       name: Buck_attack-Sheet_1
       rect:
         serializedVersion: 2
-        x: 83
+        x: 90
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -144,7 +144,7 @@ TextureImporter:
         serializedVersion: 2
         x: 166
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -163,9 +163,9 @@ TextureImporter:
       name: Buck_attack-Sheet_3
       rect:
         serializedVersion: 2
-        x: 250
+        x: 253
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 9
       pivot: {x: 0.45994508, y: 0.5066758}
@@ -186,7 +186,7 @@ TextureImporter:
         serializedVersion: 2
         x: 334
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 9
       pivot: {x: 0.42259642, y: 0.50000024}
@@ -207,7 +207,7 @@ TextureImporter:
         serializedVersion: 2
         x: 414
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 9
       pivot: {x: 0.4205359, y: 0.5047679}
@@ -226,9 +226,9 @@ TextureImporter:
       name: Buck_attack-Sheet_6
       rect:
         serializedVersion: 2
-        x: 495
+        x: 494
         y: 0
-        width: 75
+        width: 66
         height: 50
       alignment: 9
       pivot: {x: 0.41417807, y: 0.49523208}
@@ -247,9 +247,9 @@ TextureImporter:
       name: Buck_attack-Sheet_7
       rect:
         serializedVersion: 2
-        x: 573
+        x: 574
         y: 0
-        width: 67
+        width: 66
         height: 50
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

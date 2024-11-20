@@ -1,7 +1,5 @@
+using Action = System.Action;
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class EnemigoEstandar : Enemigo
@@ -117,11 +115,10 @@ public class EnemigoEstandar : Enemigo
 
     private IEnumerator DestruirEnemigo()
     {
-        yield return new WaitForSeconds(7);
-
+        yield return new WaitForSeconds(1.5f);
+        EventManager.Instance.TriggerEnemyDeath();
         Destroy(gameObject);
     }
-
 
     private IEnumerator DetectarJugador()
     {
@@ -161,15 +158,6 @@ public class EnemigoEstandar : Enemigo
             if (!jugadorDetectado) { 
                 comportamientoAleatorio = Random.Range(0, 3);
 
-                //if (comportamientoAleatorio >= 0 && comportamientoAleatorio <= 1)
-                //{
-                //    print("Patrullando...");
-                //}
-                //else
-                //{
-                //    print("Esperando...");
-                //}
-
                 yield return new WaitForSeconds(5f);
 
                 if (!estaVivo)
@@ -182,7 +170,6 @@ public class EnemigoEstandar : Enemigo
                 yield return new WaitForSeconds(5f);
             }
         }
-        //print("Comportamiento detenido");
 
     }
 
@@ -239,7 +226,6 @@ public class EnemigoEstandar : Enemigo
     {
         yield return new WaitForSeconds(tiempoAntesDeAtaque);
 
-        //print("Golpeando...");
         animator.SetBool("Golpe", true);
 
         yield return new WaitForSeconds(duracionAtaque);
@@ -257,7 +243,7 @@ public class EnemigoEstandar : Enemigo
         {
             if (hit.collider.CompareTag("Player"))
             {
-                vidaJugador.TomarDanio(new Vector2(transform.position.x, transform.position.y).normalized);
+                vidaJugador.TomarDanio();
             }
         }
     }
