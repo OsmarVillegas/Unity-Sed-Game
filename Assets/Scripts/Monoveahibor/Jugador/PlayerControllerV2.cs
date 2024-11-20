@@ -63,6 +63,15 @@ public class PlayerControllerV2 : MonoBehaviour
     private float sePuedeRebotar;
     [SerializeField] private Vector2 velocidadRebote;
 
+    [SerializeField] private EjecutarCinematica ejecutarCinematica;
+
+    [Header("Sonido")]
+
+    [SerializeField] private AudioClip saltoSonido;
+
+    [SerializeField] private AudioClip esquiveSonido;
+
+    [SerializeField] private AudioClip caminandoSonido;
 
     // Start is called before the first frame update
     void Start()
@@ -74,6 +83,7 @@ public class PlayerControllerV2 : MonoBehaviour
         escalaGravedadNormal = rb2d.gravityScale;
 
         administradorTutorial.TutorialSaltado += ActivarMovimiento;
+        ejecutarCinematica.detenerJugador += DesactivarMovimiento;
     }
 
     // Update is called once per frame
@@ -181,6 +191,12 @@ public class PlayerControllerV2 : MonoBehaviour
     {
         tutorialFinalizado = true;
     }
+    private void DesactivarMovimiento()
+    {
+        tutorialFinalizado = false;
+        movimientoHorizontal = 0;
+        animator.SetFloat("Horizontal", Mathf.Abs(movimientoHorizontal));
+    }
 
     private void SaltoDesdePared()
     {
@@ -204,6 +220,7 @@ public class PlayerControllerV2 : MonoBehaviour
     {
         if (salto && enSuelo)
         {
+            ControladorSonido.instance.EjecutarSonido(saltoSonido);
             rb2d.AddForce(new Vector2(0f, fuerzaDeSalto));
             salto = false;
         }
@@ -294,6 +311,7 @@ public class PlayerControllerV2 : MonoBehaviour
         esquivando = true;
         puedeEsquivar = false;
         animator.SetBool("Esquivando", esquivando);
+        ControladorSonido.instance.EjecutarSonido(esquiveSonido);
         Physics2D.IgnoreLayerCollision(9, 10, true);
 
         if (!mirandoDerecha)

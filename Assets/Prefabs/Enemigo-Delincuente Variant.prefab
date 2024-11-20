@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8453913073211172315
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 48370283156798964, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.66674745
+      objectReference: {fileID: 0}
+    - target: {fileID: 48370283156798964, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.66253567
+      objectReference: {fileID: 0}
+    - target: {fileID: 48370283156798964, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 48370283156798964, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Size.x
+      value: 24.645575
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Size.y
+      value: 10.514459
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Offset.x
+      value: 4.393674
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Offset.y
+      value: 1.198647
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.66674745
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.66253567
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.9375
+      objectReference: {fileID: 0}
+    - target: {fileID: 662372770507701170, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322928194386227731, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1283020858, guid: 236de323b5e02354e96b631babe07c95, type: 3}
+    - target: {fileID: 3239648572546292126, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Name
+      value: Enemigo-Delincuente Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 5818522786765737243, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f0b11277ba464dd49890e10b94cd228f, type: 2}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9979365
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.064210154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -7.363
+      objectReference: {fileID: 0}
+    - target: {fileID: 6862313327825480044, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: GizmosJugador
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: coolDownAtaque
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: duracionAtaque
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: tamanioDanio.x
+      value: 1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: tiempoAntesDeAtaque
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: distanciaEspaldaJugador
+      value: 4.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554048404947207851, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}
+      propertyPath: distanciaEnFrenteJugador
+      value: 7.59
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3d4890d2760d5f4dac12323a7afbcad, type: 3}

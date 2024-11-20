@@ -13,6 +13,7 @@ public class BarraDeTiempo : MonoBehaviour
     private Slider slider;
 
     [SerializeField] private AdministradorDeTutorial administradorTutorial;
+    [SerializeField] private GameManager gameManager;
 
     public event Action OnTimeExpired;
 
@@ -24,10 +25,9 @@ public class BarraDeTiempo : MonoBehaviour
         tiempoRestante = segundos;
         slider.value = tiempoRestante;
 
-        administradorTutorial.TutorialSaltado += ActivarMovimiento;
+        administradorTutorial.TutorialSaltado += ActivarTimer;
+        gameManager.nivelFinalizado += DesactivarTimer;
     }
-
-
 
     // Update is called once per frame
     void Update()
@@ -46,9 +46,14 @@ public class BarraDeTiempo : MonoBehaviour
             }
         }
     }
-    private void ActivarMovimiento()
+    private void ActivarTimer()
     {
         activarTimer = true;
+    }
+
+    private void DesactivarTimer()
+    {
+        activarTimer = false;
     }
 
     public float GetTiempoRestante()

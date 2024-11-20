@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.38756213}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c770821d4d1aa14089405090e2e8fd4
+      internalID: -262793632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2519b2defdf8ffd49bc10f7f43ee7f09
+      internalID: -895833188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd3834cb85a62944ab6831d017970550
+      internalID: -597838756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8db190c972b56fe4293eb316d2553562
+      internalID: 1278467552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f83be69a4455114c9613a3664bd57cb
+      internalID: 262721424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5c0252c9bc5c246a8b3ea41d80f68b
+      internalID: 974723203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 70
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5078903, y: 0.3875621}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621bd7ff9c8cc7d439f1cfe80451a678
+      internalID: -1450327416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 0
+        width: 72
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5163964, y: 0.40661815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43c6735f2db0b2547ba12b1f4dda5ca5
+      internalID: 1528393185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 74
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5163964, y: 0.4066181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2cf7c7be71be87488a6ef63a55acc59
+      internalID: 1107403197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 0
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5163964, y: 0.4066181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38fc87cb54ca4074b81b753f01a32660
+      internalID: 1365407021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Muerte-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 0
+        width: 73
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5163964, y: 0.4066181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61514db790180384ea442d4acfc12a84
+      internalID: 1064452157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +337,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hiper-Mutante-Muerte-Sheet_0: -262793632
+      Hiper-Mutante-Muerte-Sheet_1: -895833188
+      Hiper-Mutante-Muerte-Sheet_10: 1064452157
+      Hiper-Mutante-Muerte-Sheet_2: -597838756
+      Hiper-Mutante-Muerte-Sheet_3: 1278467552
+      Hiper-Mutante-Muerte-Sheet_4: 262721424
+      Hiper-Mutante-Muerte-Sheet_5: 974723203
+      Hiper-Mutante-Muerte-Sheet_6: -1450327416
+      Hiper-Mutante-Muerte-Sheet_7: 1528393185
+      Hiper-Mutante-Muerte-Sheet_8: 1107403197
+      Hiper-Mutante-Muerte-Sheet_9: 1365407021
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
