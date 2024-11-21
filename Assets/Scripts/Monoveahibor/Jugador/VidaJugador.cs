@@ -12,8 +12,6 @@ public class VidaJugador : MonoBehaviour
 
     public BarraDeTiempo barraDeTiempo;
 
-    public event Action OnTimeExpired;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +22,12 @@ public class VidaJugador : MonoBehaviour
 
     // Update is called once per frame
 
-    public void TomarDanio(Vector2 posicion)
+    public void TomarDanio()
     {
         animator.SetTrigger("Muerte");
         MostrarPantalla();
         movimientoJugador.estaVivo = false;
         Physics2D.IgnoreLayerCollision(9, 10, true);
-        movimientoJugador.Rebote(posicion);
     }
 
     private void MostrarPantalla()
@@ -43,6 +40,15 @@ public class VidaJugador : MonoBehaviour
         movimientoJugador.estaVivo = false;
         Physics2D.IgnoreLayerCollision(9, 10, true);
         MuerteJugador?.Invoke(this, EventArgs.Empty);
+    }
+
+    private IEnumerator SlowMotionEffect()
+    {
+        Time.timeScale = 0.2f; // Ralentiza el tiempo (ejemplo: 0.2)
+        Time.fixedDeltaTime = 0.02f * Time.timeScale; // Ajusta la física para que coincida con el tiempo ralentizado
+        yield return new WaitForSecondsRealtime(0.15f); // Usa WaitForSecondsRealtime para medir tiempo real
+        Time.timeScale = 1f; // Vuelve a la velocidad normal
+        Time.fixedDeltaTime = 0.02f; // Restaura el fixedDeltaTime original
     }
 
 }

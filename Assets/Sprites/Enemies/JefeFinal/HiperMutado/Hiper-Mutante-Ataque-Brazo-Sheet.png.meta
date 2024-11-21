@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.38191772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae971e9b11cd61343b6f725ff4f60cb4
+      internalID: -1499345061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e63a4ed24f2ab946a08b0c1614ea8a9
+      internalID: 535668848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c20999bb754cce344a6b5b6ca640dc62
+      internalID: 2058297125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af19fdf0470f8fb43a12180afa698715
+      internalID: -463679258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 265a9612cdc875a498504292245f75cc
+      internalID: -1556673543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 0
+        width: 140
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed2436b02589d340af289da7b8757e3
+      internalID: -1011190057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 148
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343fac22219f95f4e892bda5f5c46a93
+      internalID: -470336596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1050
+        y: 0
+        width: 150
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2a7ad2c6c390144b8a1754c204c14d4
+      internalID: 992611089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hiper-Mutante-Ataque-Brazo-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 149
+        height: 70
+      alignment: 9
+      pivot: {x: 0.1654329, y: 0.3819177}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f073978e6a4f8408bf9a76c8471684
+      internalID: 2075289672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +295,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hiper-Mutante-Ataque-Brazo-Sheet_0: -1499345061
+      Hiper-Mutante-Ataque-Brazo-Sheet_1: 535668848
+      Hiper-Mutante-Ataque-Brazo-Sheet_2: 2058297125
+      Hiper-Mutante-Ataque-Brazo-Sheet_3: -463679258
+      Hiper-Mutante-Ataque-Brazo-Sheet_4: -1556673543
+      Hiper-Mutante-Ataque-Brazo-Sheet_5: -1011190057
+      Hiper-Mutante-Ataque-Brazo-Sheet_6: -470336596
+      Hiper-Mutante-Ataque-Brazo-Sheet_7: 992611089
+      Hiper-Mutante-Ataque-Brazo-Sheet_8: 2075289672
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

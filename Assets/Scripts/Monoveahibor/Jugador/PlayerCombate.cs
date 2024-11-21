@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Timeline;
@@ -46,12 +47,19 @@ public class PlayerCombate : MonoBehaviour
 
     private PlayerControllerV2 playerControllerV2;
 
+    [SerializeField] private EjecutarCinematica ejecutarCinematica;
+
+    [Header("Sonido")]
+
+    [SerializeField] private AudioClip ataqueSonido;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetBool("Golpe", false);
         playerControllerV2 = GetComponent<PlayerControllerV2>();
+        ejecutarCinematica.detenerJugador += DesactivarMovimiento;
 
         administradorTutorial.TutorialSaltado += ActivarMovimiento;
     }
@@ -110,6 +118,10 @@ public class PlayerCombate : MonoBehaviour
     {
         tutorialFinalizado = true;
     }
+    private void DesactivarMovimiento()
+    {
+        tutorialFinalizado = false;
+    }
 
     private void Golpe()
     {
@@ -121,13 +133,20 @@ public class PlayerCombate : MonoBehaviour
             {
                 colisionador.transform.GetComponent<EnemigoEstandar>().TomarDaño(dañoGolpe);
             }
+
+            if (colisionador.CompareTag("Jefe") && !colisionador.isTrigger)
+            {
+                colisionador.transform.GetComponent<Jefe>().TomarDaño(dañoGolpe);
+            }
         }
     }
+
     private IEnumerator Dash()
     {
         animator.SetBool("Golpe", true);
         canDash = false;
         isDashing = true;
+        ControladorSonido.instance.EjecutarSonido(ataqueSonido);
         float originalGravity = rb.gravityScale;
         rb.gravityScale = 10;
         Vector3 dashDirection = (mouseWorldPosition - transform.position).normalized;

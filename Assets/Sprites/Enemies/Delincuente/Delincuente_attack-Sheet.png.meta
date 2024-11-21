@@ -102,10 +102,10 @@ TextureImporter:
         serializedVersion: 2
         x: 8
         y: 7
-        width: 31
-        height: 42
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 59
+        height: 61
+      alignment: 9
+      pivot: {x: 0.34179416, y: 0.451182}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -123,10 +123,10 @@ TextureImporter:
         serializedVersion: 2
         x: 76
         y: 7
-        width: 37
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 59
+        height: 61
+      alignment: 9
+      pivot: {x: 0.49606118, y: 0.4695222}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -144,10 +144,10 @@ TextureImporter:
         serializedVersion: 2
         x: 158
         y: 7
-        width: 30
-        height: 50
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 59
+        height: 61
+      alignment: 9
+      pivot: {x: 0.38505915, y: 0.4646422}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +168,7 @@ TextureImporter:
         width: 59
         height: 61
       alignment: 9
-      pivot: {x: 0.31255302, y: 0.37065363}
+      pivot: {x: 0.39163983, y: 0.48448363}
       border: {x: 0, y: 0, z: 26, w: 0}
       outline: []
       physicsShape: []
@@ -184,12 +184,12 @@ TextureImporter:
       name: Delincuente_attack-Sheet_4
       rect:
         serializedVersion: 2
-        x: 322
+        x: 317
         y: 7
-        width: 22
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 58
+        height: 61
+      alignment: 9
+      pivot: {x: 0.33199757, y: 0.4583126}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controladorGolpe: {fileID: 4514069552380607370}
-  radioGolpe: 2
+  radioGolpe: 3
   "da\xF1oGolpe": 10
   maxDistanceFromPlayer: 3
   administradorTutorial: {fileID: 0}
@@ -246,6 +246,8 @@ MonoBehaviour:
   dashingTime: 0.2
   dashingCooldown: 0.6
   tr: {fileID: 8953539368808683950}
+  ejecutarCinematica: {fileID: 0}
+  ataqueSonido: {fileID: 8300000, guid: 501f9641c8fd7d945bf599a56f5fa6c7, type: 3}
 --- !u!114 &7435985368946640113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +288,10 @@ MonoBehaviour:
   dashingTime: 0.15
   estaVivo: 0
   velocidadRebote: {x: 10, y: 10}
+  ejecutarCinematica: {fileID: 0}
+  saltoSonido: {fileID: 8300000, guid: a3ba4f7e3d466d64d87cab60f3209215, type: 3}
+  esquiveSonido: {fileID: 8300000, guid: 13f4dab383bece04eb0d6673f12273cb, type: 3}
+  caminandoSonido: {fileID: 8300000, guid: 8f96071beeab8104c885bc1e85e2cf93, type: 3}
 --- !u!114 &5832749084782554565
 MonoBehaviour:
   m_ObjectHideFlags: 0

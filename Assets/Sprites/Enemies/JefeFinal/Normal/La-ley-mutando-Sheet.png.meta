@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,616 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119061, y: 0.4807681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3e4fc4721d0e9544872af194d20cef8
+      internalID: -786113676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119061, y: 0.4807681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a81f1f2d363134eb0a823bb41362f9
+      internalID: -427720239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119061, y: 0.4807681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29898656cab212748b392496c50b449b
+      internalID: -912141982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.48351547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f211319e744242a499dea7bda1eab6af
+      internalID: -653376013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4311d16eabe6f41429891c5172353d21
+      internalID: 522197795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 614fbbb56c53dad4c9c99f6a65357210
+      internalID: 1478759234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90a1033229966c478709f5e9b05545f
+      internalID: -1668054271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d3a4b83b6faec428e47170f25f3690
+      internalID: -1773629822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb95d32bf4d530e468d7e768610c0a5e
+      internalID: 1965555944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75edd9dd06ef66a49ad0e5c22fa015a6
+      internalID: 1200864284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1000
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d9f53ce9814ca4c97897272a04da1e
+      internalID: -195859322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2e33d6d5fd6a084781356d196de53c7
+      internalID: 673137894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d64d036e29596ea448d49b8c10b60a64
+      internalID: -140787810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0549308a1facc4ab9f70a8a383b3ee
+      internalID: 612306911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325876ff2bf2c5447a0230a9e38c8a0c
+      internalID: 1952740448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd512bb43abea8e448c4ad1a49c5cfda
+      internalID: 22506639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e70df57b62754348966abbe64ef673f
+      internalID: 1786842989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1700
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 881567d83feb1b74c8a65b9f8367a377
+      internalID: -1513698673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1800
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c205bd7a0bdfa794caba42338b211983
+      internalID: 1573258056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 210d7dfdce2b5cf4e9c648ae39005b6d
+      internalID: -227836925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5689b6da85ae17745a88bd2ff179d7b5
+      internalID: 1311273375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27ca8573e25e60a4d9ff86ac83f28d82
+      internalID: -25326131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62164b851a8c24f44a158531c9ddd3cf
+      internalID: -1433057817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de94c22416aed3499139c0d8d851562
+      internalID: 493788231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e87287ccf43c8438a21b30bbed8ed4
+      internalID: 1140703995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 2500
+        y: 0
+        width: 90
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5092394, y: 0.43580687}
+      border: {x: 0, y: 0, z: 0, w: 6}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5723fab2ffcf34e4c88b0ed1301cf739
+      internalID: 213163633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 2600
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5969c1e875c6fc545a5b73a46174d199
+      internalID: -649240135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610d0064647fce84cb20bc65b81eaaf7
+      internalID: 913334143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: La-ley-mutando-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 90
+        height: 65
+      alignment: 9
+      pivot: {x: 0.5119056, y: 0.4835155}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d119bfdf5b4d2254c8d8bc7dfcd88241
+      internalID: -1169699105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +715,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      La-ley-mutando-Sheet_0: -786113676
+      La-ley-mutando-Sheet_1: -427720239
+      La-ley-mutando-Sheet_10: -195859322
+      La-ley-mutando-Sheet_11: 673137894
+      La-ley-mutando-Sheet_12: -140787810
+      La-ley-mutando-Sheet_13: 612306911
+      La-ley-mutando-Sheet_14: 1952740448
+      La-ley-mutando-Sheet_15: 22506639
+      La-ley-mutando-Sheet_16: 1786842989
+      La-ley-mutando-Sheet_17: -1513698673
+      La-ley-mutando-Sheet_18: 1573258056
+      La-ley-mutando-Sheet_19: -227836925
+      La-ley-mutando-Sheet_2: -912141982
+      La-ley-mutando-Sheet_20: 1311273375
+      La-ley-mutando-Sheet_21: -25326131
+      La-ley-mutando-Sheet_22: -1433057817
+      La-ley-mutando-Sheet_23: 493788231
+      La-ley-mutando-Sheet_24: 1140703995
+      La-ley-mutando-Sheet_25: 213163633
+      La-ley-mutando-Sheet_26: -649240135
+      La-ley-mutando-Sheet_27: 913334143
+      La-ley-mutando-Sheet_28: -1169699105
+      La-ley-mutando-Sheet_3: -653376013
+      La-ley-mutando-Sheet_4: 522197795
+      La-ley-mutando-Sheet_5: 1478759234
+      La-ley-mutando-Sheet_6: -1668054271
+      La-ley-mutando-Sheet_7: -1773629822
+      La-ley-mutando-Sheet_8: 1965555944
+      La-ley-mutando-Sheet_9: 1200864284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -100,12 +100,12 @@ TextureImporter:
       name: Delincuente_muerte-Sheet_0
       rect:
         serializedVersion: 2
-        x: 37
+        x: 15
         y: 8
-        width: 31
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 70
+        height: 44
+      alignment: 9
+      pivot: {x: 0.5602548, y: 0.4999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,12 +121,12 @@ TextureImporter:
       name: Delincuente_muerte-Sheet_1
       rect:
         serializedVersion: 2
-        x: 106
+        x: 86
         y: 8
-        width: 37
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 70
+        height: 44
+      alignment: 9
+      pivot: {x: 0.61573184, y: 0.53673905}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -142,12 +142,12 @@ TextureImporter:
       name: Delincuente_muerte-Sheet_4
       rect:
         serializedVersion: 2
-        x: 158
+        x: 157
         y: 8
-        width: 58
+        width: 70
         height: 44
       alignment: 9
-      pivot: {x: 0.59040624, y: 0.45233133}
+      pivot: {x: 0.5854717, y: 0.5976246}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -163,12 +163,12 @@ TextureImporter:
       name: Delincuente_muerte-Sheet_5
       rect:
         serializedVersion: 2
-        x: 231
-        y: 9
-        width: 64
-        height: 28
+        x: 229
+        y: 8
+        width: 70
+        height: 44
       alignment: 9
-      pivot: {x: 0.5404897, y: 0.44215748}
+      pivot: {x: 0.5070143, y: 0.61157537}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -187,9 +187,9 @@ TextureImporter:
         x: 304
         y: 8
         width: 70
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 44
+      alignment: 9
+      pivot: {x: 0.49941623, y: 0.66849077}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -7,7 +7,7 @@ TagManager:
   - Enemigo
   - Plataforma
   - BarraDeTiempo
-  - Meta
+  - Jefe
   layers:
   - Default
   - TransparentFX

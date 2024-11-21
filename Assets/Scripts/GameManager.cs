@@ -1,34 +1,83 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Formats.Alembic.Timeline;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public BarraDeTiempo barraDeTiempo;
+    private Enemigo[] enemigo;
+    private Jefe jefe;
+    [SerializeField] private GameObject alertaNext;
+    [SerializeField] private GameObject ejecutarCinematica;
+    private bool alertaActivada = false;
+
+    public event Action nivelFinalizado;
+
+    private bool seEnvioEvento=false;
 
     private void Start()
     {
-        if (barraDeTiempo != null)
-        {
-            // Suscribirse al evento de finalizaci�n de tiempo del Timer
-            barraDeTiempo.OnTimeExpired += TiempoTerminado;
-        }
+        // Encuentra todos los objetos con el script Enemy
+        enemigo = FindObjectsOfType<Enemigo>();
+        jefe = FindObjectOfType<Jefe>();
+
+        // Muestra la cantidad de enemigos
+        Debug.Log("Cantidad de enemigos en la escena: " + (enemigo.Length));
+
     }
 
-    private void TiempoTerminado()
+    private void Update()
     {
-        // Aqu� defines lo que sucede cuando el tiempo se acaba
-        Debug.Log("�El tiempo ha terminado!");
-        // Ejemplo: cargar otra escena o mostrar pantalla de fin de nivel
+
+        if (jefe == null)
+        {
+            if (enemigo.Length == 0 && !alertaActivada)
+            {
+                if (!seEnvioEvento)
+                {
+                    nivelFinalizado?.Invoke();
+                    seEnvioEvento = true;
+                }
+
+                ejecutarCinematica.SetActive(true);
+                StartCoroutine(ActivarAlertaNext());
+            }else if (enemigo.Length >= 1){
+                alertaActivada = false;
+            }
+
+        }
+        else
+        {
+            if (jefe == null && !alertaActivada)
+            {
+                if (!seEnvioEvento)
+                {
+                    nivelFinalizado?.Invoke();
+                    ejecutarCinematica.SetActive(true);
+                    seEnvioEvento = true;
+                }
+            }
+        }
+
+        enemigo = FindObjectsOfType<Enemigo>();
+        jefe = FindObjectOfType<Jefe>();
     }
 
-    private void OnDestroy()
+    private void EnemigoEstandar_muerteEnemigo()
     {
-        // Aseg�rate de desuscribirte del evento para evitar problemas
-        if (barraDeTiempo != null)
-        {
-            barraDeTiempo.OnTimeExpired -= TiempoTerminado;
-        }
+        throw new System.NotImplementedException();
+    }
+
+    private IEnumerator ActivarAlertaNext()
+    {
+        alertaActivada = true;
+        alertaNext.SetActive(true);
+        yield return new WaitForSeconds(2.1f);
+        alertaNext.SetActive(false);
+        yield return new WaitForSeconds(0.6f);
+        alertaActivada = false;
     }
 }
