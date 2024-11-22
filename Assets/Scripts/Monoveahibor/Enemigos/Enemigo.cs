@@ -16,9 +16,9 @@ public class Enemigo : Entidad
 
     [SerializeField] private ParticleSystem particulas;
 
-    public void TomarDaño(float daño)
+    public void TomarDanio(float danio)
     {
-        vida -= daño;
+        vida -= danio;
 
         if (vida <= 0)
         {
@@ -28,7 +28,7 @@ public class Enemigo : Entidad
 
     private void Muerte()
     {
-        GameObject.FindGameObjectWithTag("Meta").GetComponent<Meta>().EnemigoEliminado();
+        //GameObject.FindGameObjectWithTag("Meta").GetComponent<Meta>().EnemigoEliminado();
         animator.SetTrigger("Muerte");
         estaVivo = false;
         particulas.Play();

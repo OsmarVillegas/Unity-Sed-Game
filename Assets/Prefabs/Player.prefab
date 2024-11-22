@@ -286,7 +286,7 @@ MonoBehaviour:
   cooldownEsquive: 0.4
   fuerzaEsquive: 20
   dashingTime: 0.15
-  estaVivo: 0
+  estaVivo: 1
   velocidadRebote: {x: 10, y: 10}
   ejecutarCinematica: {fileID: 0}
   saltoSonido: {fileID: 8300000, guid: a3ba4f7e3d466d64d87cab60f3209215, type: 3}
