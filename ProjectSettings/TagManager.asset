@@ -8,6 +8,7 @@ TagManager:
   - Plataforma
   - BarraDeTiempo
   - Jefe
+  - Meta
   layers:
   - Default
   - TransparentFX
