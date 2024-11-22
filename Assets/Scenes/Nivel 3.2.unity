@@ -14907,7 +14907,7 @@ PrefabInstance:
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 902137815}
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: sceneIndex
       value: 11
@@ -76054,7 +76054,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5361386836916001715, guid: 13ab9a78d08cda94ea3d416c5ff19147, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -4.3344727
+      value: 7.399994
       objectReference: {fileID: 0}
     - target: {fileID: 7111234806998700656, guid: 13ab9a78d08cda94ea3d416c5ff19147, type: 3}
       propertyPath: m_PixelPerfect
@@ -76217,7 +76217,7 @@ Transform:
   m_GameObject: {fileID: 1505503267}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7248726, y: -6.8979697, z: -9.954484}
+  m_LocalPosition: {x: 1.7294149, y: -6.8979597, z: -9.954484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -77160,6 +77160,10 @@ PrefabInstance:
     - target: {fileID: 1388363387997821727, guid: f573bc957d078f0429813a91db84c9cd, type: 3}
       propertyPath: m_Name
       value: AlertaNext
+      objectReference: {fileID: 0}
+    - target: {fileID: 1388363387997821727, guid: f573bc957d078f0429813a91db84c9cd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3239130642491278694, guid: f573bc957d078f0429813a91db84c9cd, type: 3}
       propertyPath: m_Pivot.x

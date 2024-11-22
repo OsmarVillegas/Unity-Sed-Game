@@ -93,6 +93,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,12 +113,12 @@ TextureImporter:
       name: GUI_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 295
-        width: 42
-        height: 3
+        x: 71
+        y: 292
+        width: 46
+        height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -122,11 +135,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 6
-        y: 279
-        width: 49
-        height: 3
+        y: 277
+        width: 114
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,7 +160,7 @@ TextureImporter:
         width: 52
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,7 +181,7 @@ TextureImporter:
         width: 44
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +202,7 @@ TextureImporter:
         width: 42
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,7 +223,7 @@ TextureImporter:
         width: 64
         height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,7 +244,7 @@ TextureImporter:
         width: 18
         height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,12 +260,12 @@ TextureImporter:
       name: GUI_7
       rect:
         serializedVersion: 2
-        x: 53
-        y: 231
-        width: 6
-        height: 5
+        x: 145
+        y: 225
+        width: 46
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,12 +281,12 @@ TextureImporter:
       name: GUI_8
       rect:
         serializedVersion: 2
-        x: 69
-        y: 230
-        width: 6
-        height: 5
+        x: 1
+        y: 209
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,12 +302,12 @@ TextureImporter:
       name: GUI_9
       rect:
         serializedVersion: 2
-        x: 84
-        y: 230
-        width: 8
-        height: 6
+        x: 17
+        y: 209
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,12 +323,12 @@ TextureImporter:
       name: GUI_10
       rect:
         serializedVersion: 2
-        x: 100
-        y: 227
-        width: 8
-        height: 10
+        x: 33
+        y: 209
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,12 +344,12 @@ TextureImporter:
       name: GUI_11
       rect:
         serializedVersion: 2
-        x: 116
-        y: 230
-        width: 8
-        height: 6
+        x: 113
+        y: 209
+        width: 30
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,12 +365,12 @@ TextureImporter:
       name: GUI_12
       rect:
         serializedVersion: 2
-        x: 133
-        y: 230
-        width: 7
-        height: 6
+        x: 145
+        y: 209
+        width: 46
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -373,12 +386,12 @@ TextureImporter:
       name: GUI_13
       rect:
         serializedVersion: 2
-        x: 145
-        y: 225
-        width: 46
-        height: 14
+        x: 0
+        y: 176
+        width: 48
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -394,12 +407,12 @@ TextureImporter:
       name: GUI_14
       rect:
         serializedVersion: 2
-        x: 1
-        y: 209
-        width: 14
-        height: 14
+        x: 49
+        y: 177
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -415,12 +428,12 @@ TextureImporter:
       name: GUI_15
       rect:
         serializedVersion: 2
-        x: 17
-        y: 209
-        width: 14
-        height: 13
+        x: 81
+        y: 177
+        width: 30
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -436,12 +449,12 @@ TextureImporter:
       name: GUI_16
       rect:
         serializedVersion: 2
-        x: 33
-        y: 209
-        width: 14
-        height: 14
+        x: 113
+        y: 193
+        width: 30
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,12 +470,12 @@ TextureImporter:
       name: GUI_17
       rect:
         serializedVersion: 2
-        x: 52
-        y: 214
-        width: 8
-        height: 7
+        x: 145
+        y: 193
+        width: 46
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,12 +491,12 @@ TextureImporter:
       name: GUI_18
       rect:
         serializedVersion: 2
-        x: 70
-        y: 214
-        width: 4
-        height: 7
+        x: 3
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -499,12 +512,12 @@ TextureImporter:
       name: GUI_19
       rect:
         serializedVersion: 2
-        x: 81
-        y: 177
-        width: 30
-        height: 30
+        x: 23
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -520,12 +533,12 @@ TextureImporter:
       name: GUI_20
       rect:
         serializedVersion: 2
-        x: 85
-        y: 215
-        width: 6
-        height: 5
+        x: 43
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -541,12 +554,12 @@ TextureImporter:
       name: GUI_21
       rect:
         serializedVersion: 2
-        x: 113
-        y: 209
-        width: 30
-        height: 14
+        x: 63
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -562,12 +575,12 @@ TextureImporter:
       name: GUI_22
       rect:
         serializedVersion: 2
-        x: 145
-        y: 209
-        width: 46
-        height: 14
+        x: 83
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,12 +596,12 @@ TextureImporter:
       name: GUI_23
       rect:
         serializedVersion: 2
-        x: 0
-        y: 176
-        width: 48
-        height: 32
+        x: 103
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -604,12 +617,12 @@ TextureImporter:
       name: GUI_24
       rect:
         serializedVersion: 2
-        x: 49
-        y: 177
-        width: 30
-        height: 30
+        x: 123
+        y: 155
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -626,11 +639,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 113
-        y: 193
+        y: 177
         width: 30
-        height: 13
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -647,11 +660,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 145
-        y: 193
-        width: 46
-        height: 13
+        y: 161
+        width: 47
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -667,12 +680,12 @@ TextureImporter:
       name: GUI_27
       rect:
         serializedVersion: 2
-        x: 9
-        y: 165
-        width: 17
-        height: 7
+        x: 4
+        y: 134
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -688,12 +701,12 @@ TextureImporter:
       name: GUI_28
       rect:
         serializedVersion: 2
-        x: 67
-        y: 165
-        width: 105
-        height: 7
+        x: 24
+        y: 134
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -709,12 +722,12 @@ TextureImporter:
       name: GUI_29
       rect:
         serializedVersion: 2
-        x: 39
-        y: 165
+        x: 44
+        y: 134
         width: 18
-        height: 7
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -730,12 +743,12 @@ TextureImporter:
       name: GUI_30
       rect:
         serializedVersion: 2
-        x: 113
-        y: 177
-        width: 30
-        height: 14
+        x: 170
+        y: 149
+        width: 12
+        height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -751,12 +764,12 @@ TextureImporter:
       name: GUI_31
       rect:
         serializedVersion: 2
-        x: 145
-        y: 177
-        width: 46
-        height: 14
+        x: 10
+        y: 47
+        width: 44
+        height: 76
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,12 +785,12 @@ TextureImporter:
       name: GUI_32
       rect:
         serializedVersion: 2
-        x: 5
-        y: 149
-        width: 23
+        x: 10
+        y: 117
+        width: 4
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -793,12 +806,12 @@ TextureImporter:
       name: GUI_33
       rect:
         serializedVersion: 2
-        x: 71
-        y: 149
-        width: 18
+        x: 37
+        y: 117
+        width: 8
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -814,12 +827,12 @@ TextureImporter:
       name: GUI_34
       rect:
         serializedVersion: 2
-        x: 104
-        y: 149
-        width: 16
+        x: 46
+        y: 117
+        width: 12
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -835,12 +848,12 @@ TextureImporter:
       name: GUI_36
       rect:
         serializedVersion: 2
-        x: 139
-        y: 149
-        width: 10
-        height: 7
+        x: 65
+        y: 119
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -856,12 +869,12 @@ TextureImporter:
       name: GUI_37
       rect:
         serializedVersion: 2
-        x: 170
-        y: 149
-        width: 12
-        height: 7
+        x: 65
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -877,12 +890,12 @@ TextureImporter:
       name: GUI_38
       rect:
         serializedVersion: 2
-        x: 9
-        y: 133
-        width: 14
-        height: 7
+        x: 71
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -898,12 +911,12 @@ TextureImporter:
       name: GUI_39
       rect:
         serializedVersion: 2
-        x: 42
-        y: 133
-        width: 4
-        height: 7
+        x: 73
+        y: 119
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,12 +932,12 @@ TextureImporter:
       name: GUI_40
       rect:
         serializedVersion: 2
-        x: 47
-        y: 133
-        width: 6
-        height: 7
+        x: 77
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -940,12 +953,12 @@ TextureImporter:
       name: GUI_41
       rect:
         serializedVersion: 2
-        x: 70
-        y: 133
-        width: 20
-        height: 7
+        x: 81
+        y: 119
+        width: 6
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -961,12 +974,12 @@ TextureImporter:
       name: GUI_42
       rect:
         serializedVersion: 2
-        x: 81
+        x: 89
         y: 119
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -982,12 +995,12 @@ TextureImporter:
       name: GUI_43
       rect:
         serializedVersion: 2
-        x: 100
-        y: 133
-        width: 24
-        height: 7
+        x: 89
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1003,12 +1016,12 @@ TextureImporter:
       name: GUI_44
       rect:
         serializedVersion: 2
-        x: 136
-        y: 134
-        width: 16
-        height: 7
+        x: 95
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1024,12 +1037,12 @@ TextureImporter:
       name: GUI_45
       rect:
         serializedVersion: 2
-        x: 146
+        x: 97
         y: 119
         width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1045,12 +1058,12 @@ TextureImporter:
       name: GUI_46
       rect:
         serializedVersion: 2
-        x: 168
-        y: 133
-        width: 8
-        height: 7
+        x: 100
+        y: 95
+        width: 18
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1066,12 +1079,12 @@ TextureImporter:
       name: GUI_47
       rect:
         serializedVersion: 2
-        x: 177
-        y: 133
-        width: 8
-        height: 7
+        x: 101
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1087,12 +1100,12 @@ TextureImporter:
       name: GUI_48
       rect:
         serializedVersion: 2
-        x: 10
-        y: 47
-        width: 44
-        height: 66
+        x: 104
+        y: 119
+        width: 5
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1108,12 +1121,12 @@ TextureImporter:
       name: GUI_49
       rect:
         serializedVersion: 2
-        x: 10
-        y: 117
-        width: 11
-        height: 7
+        x: 105
+        y: 83
+        width: 48
+        height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1129,12 +1142,12 @@ TextureImporter:
       name: GUI_50
       rect:
         serializedVersion: 2
-        x: 37
-        y: 117
-        width: 8
-        height: 7
+        x: 111
+        y: 119
+        width: 5
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1150,12 +1163,12 @@ TextureImporter:
       name: GUI_51
       rect:
         serializedVersion: 2
-        x: 46
-        y: 117
-        width: 12
-        height: 7
+        x: 113
+        y: 107
+        width: 4
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1171,12 +1184,12 @@ TextureImporter:
       name: GUI_52
       rect:
         serializedVersion: 2
-        x: 65
-        y: 83
-        width: 3
-        height: 4
+        x: 118
+        y: 119
+        width: 5
+        height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1192,12 +1205,12 @@ TextureImporter:
       name: GUI_53
       rect:
         serializedVersion: 2
-        x: 65
-        y: 119
-        width: 6
+        x: 119
+        y: 107
+        width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1213,12 +1226,12 @@ TextureImporter:
       name: GUI_54
       rect:
         serializedVersion: 2
-        x: 65
+        x: 125
         y: 107
-        width: 4
+        width: 10
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1234,12 +1247,12 @@ TextureImporter:
       name: GUI_55
       rect:
         serializedVersion: 2
-        x: 71
-        y: 107
-        width: 4
+        x: 125
+        y: 119
+        width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1255,12 +1268,12 @@ TextureImporter:
       name: GUI_56
       rect:
         serializedVersion: 2
-        x: 73
+        x: 132
         y: 119
-        width: 6
+        width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1276,12 +1289,12 @@ TextureImporter:
       name: GUI_57
       rect:
         serializedVersion: 2
-        x: 77
+        x: 137
         y: 107
         width: 4
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1297,12 +1310,12 @@ TextureImporter:
       name: GUI_58
       rect:
         serializedVersion: 2
-        x: 89
-        y: 107
-        width: 4
-        height: 6
+        x: 139
+        y: 119
+        width: 5
+        height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1318,12 +1331,12 @@ TextureImporter:
       name: GUI_59
       rect:
         serializedVersion: 2
-        x: 89
+        x: 146
         y: 119
-        width: 6
+        width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1339,12 +1352,12 @@ TextureImporter:
       name: GUI_60
       rect:
         serializedVersion: 2
-        x: 95
-        y: 107
-        width: 4
+        x: 153
+        y: 119
+        width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1360,12 +1373,12 @@ TextureImporter:
       name: GUI_61
       rect:
         serializedVersion: 2
-        x: 97
-        y: 119
-        width: 5
-        height: 6
+        x: 154
+        y: 83
+        width: 37
+        height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1381,12 +1394,12 @@ TextureImporter:
       name: GUI_62
       rect:
         serializedVersion: 2
-        x: 107
+        x: 155
         y: 107
-        width: 4
-        height: 6
+        width: 10
+        height: 18
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1402,12 +1415,12 @@ TextureImporter:
       name: GUI_63
       rect:
         serializedVersion: 2
-        x: 101
-        y: 107
-        width: 4
+        x: 167
+        y: 119
+        width: 5
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1423,12 +1436,12 @@ TextureImporter:
       name: GUI_64
       rect:
         serializedVersion: 2
-        x: 104
+        x: 174
         y: 119
-        width: 5
-        height: 4
+        width: 11
+        height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1444,12 +1457,12 @@ TextureImporter:
       name: GUI_65
       rect:
         serializedVersion: 2
-        x: 105
-        y: 83
-        width: 3
-        height: 5
+        x: 65
+        y: 64
+        width: 62
+        height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1465,12 +1478,12 @@ TextureImporter:
       name: GUI_66
       rect:
         serializedVersion: 2
-        x: 111
-        y: 119
-        width: 5
-        height: 6
+        x: 129
+        y: 65
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1486,12 +1499,12 @@ TextureImporter:
       name: GUI_67
       rect:
         serializedVersion: 2
-        x: 113
-        y: 107
-        width: 4
-        height: 6
+        x: 145
+        y: 54
+        width: 46
+        height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1507,12 +1520,12 @@ TextureImporter:
       name: GUI_68
       rect:
         serializedVersion: 2
-        x: 118
-        y: 119
-        width: 5
-        height: 5
+        x: 65
+        y: 49
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1528,12 +1541,12 @@ TextureImporter:
       name: GUI_69
       rect:
         serializedVersion: 2
-        x: 119
-        y: 107
-        width: 4
-        height: 6
+        x: 82
+        y: 50
+        width: 44
+        height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1549,12 +1562,12 @@ TextureImporter:
       name: GUI_70
       rect:
         serializedVersion: 2
-        x: 125
-        y: 107
-        width: 10
-        height: 6
+        x: 129
+        y: 49
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1570,12 +1583,12 @@ TextureImporter:
       name: GUI_71
       rect:
         serializedVersion: 2
-        x: 132
-        y: 119
-        width: 5
-        height: 6
+        x: 2
+        y: 20
+        width: 77
+        height: 24
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1591,12 +1604,12 @@ TextureImporter:
       name: GUI_72
       rect:
         serializedVersion: 2
-        x: 137
-        y: 107
-        width: 4
-        height: 6
+        x: 81
+        y: 33
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1612,12 +1625,12 @@ TextureImporter:
       name: GUI_73
       rect:
         serializedVersion: 2
-        x: 139
-        y: 119
-        width: 5
-        height: 4
+        x: 97
+        y: 33
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1633,12 +1646,12 @@ TextureImporter:
       name: GUI_74
       rect:
         serializedVersion: 2
-        x: 153
-        y: 119
-        width: 5
-        height: 6
+        x: 112
+        y: 0
+        width: 80
+        height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1654,12 +1667,12 @@ TextureImporter:
       name: GUI_75
       rect:
         serializedVersion: 2
-        x: 154
-        y: 83
-        width: 2
-        height: 6
+        x: 81
+        y: 17
+        width: 14
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1675,12 +1688,12 @@ TextureImporter:
       name: GUI_76
       rect:
         serializedVersion: 2
-        x: 160
-        y: 119
-        width: 5
-        height: 6
+        x: 97
+        y: 17
+        width: 14
+        height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1696,12 +1709,12 @@ TextureImporter:
       name: GUI_77
       rect:
         serializedVersion: 2
-        x: 167
-        y: 119
-        width: 5
-        height: 6
+        x: 3
+        y: 2
+        width: 58
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1717,12 +1730,12 @@ TextureImporter:
       name: GUI_78
       rect:
         serializedVersion: 2
-        x: 174
-        y: 119
-        width: 5
-        height: 6
+        x: 65
+        y: 1
+        width: 46
+        height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1735,421 +1748,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_79
+      name: GUI_35
       rect:
         serializedVersion: 2
         x: 65
-        y: 64
-        width: 62
-        height: 15
+        y: 83
+        width: 38
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f820749bc5d1b4441b367c8f20852855
-      internalID: -68981832
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_80
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 65
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 41c6bedfdea456d4b80f0ebf35f7ccb0
-      internalID: -1379391211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_81
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 54
-        width: 46
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5a3d7ed8b1464342a829fbc33c51959
-      internalID: -1776371238
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_82
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 49
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f29fb9a01804fcb498118e2cde89ea7f
-      internalID: -1707247686
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_83
-      rect:
-        serializedVersion: 2
-        x: 82
-        y: 50
-        width: 44
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ee04b04c712ad842bd44be0a139c621
-      internalID: -162752984
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_84
-      rect:
-        serializedVersion: 2
-        x: 129
-        y: 49
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ac2ddd8a36871542a3d02423a76666b
-      internalID: 703440427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_85
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 20
-        width: 77
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df43e64242d71fd4aa3fc9ba4761a9cf
-      internalID: -1757024989
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_86
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 33
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf947459dde81894fa073a4f1bbafad3
-      internalID: 1986682363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_87
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 33
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0da246acf4f2a674bb773fa3c6db88c7
-      internalID: 1068288292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_88
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 80
-        height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c5ea6859edc97c40a94efb7bedc7773
-      internalID: 1286094199
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_89
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 17
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5e17de3cee538cf4287565210028361b
-      internalID: 901516045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_90
-      rect:
-        serializedVersion: 2
-        x: 97
-        y: 17
-        width: 14
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fcf3580b5653404cac7dbf858e3e53a
-      internalID: 442312201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_91
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 2
-        width: 58
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86edf9f28b85ab841bb3c9079d963605
-      internalID: 350739924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_92
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 1
-        width: 46
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 17a0389ccab8d7c47852c7d473029b4d
-      internalID: 1173698213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_93
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 295
-        width: 42
-        height: 3
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2992885e14f5e84da71703b75f98fb6
-      internalID: 1558178556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_94
-      rect:
-        serializedVersion: 2
-        x: 135
-        y: 293
-        width: 45
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6a313f857ba7284dba8dd6f4ed36c7b
-      internalID: 1106796999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_95
-      rect:
-        serializedVersion: 2
-        x: 72
-        y: 279
-        width: 49
-        height: 3
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa324378ef613034fbe78090a2e76b58
-      internalID: -1928666588
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_96
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 258
-        width: 43
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd6d0c99b6edff24e86d3838f347889b
-      internalID: -715305507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_97
-      rect:
-        serializedVersion: 2
-        x: 101
-        y: 212
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 51362da74e03a4147a859606ad3dd9f7
-      internalID: -306089980
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: GUI_98
-      rect:
-        serializedVersion: 2
-        x: 35
-        y: 149
-        width: 25
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5aff815a420f3354c8fe37f5cf8776d4
-      internalID: -2101178155
+      spriteID: ec8da9f447d7819409505555841d33f0
+      internalID: 487804156
       vertices: []
       indices: 
       edges: []
@@ -2242,28 +1856,8 @@ TextureImporter:
       GUI_76: -935314091
       GUI_77: -1481433367
       GUI_78: -1826767440
-      GUI_79: -68981832
       GUI_8: -658471823
-      GUI_80: -1379391211
-      GUI_81: -1776371238
-      GUI_82: -1707247686
-      GUI_83: -162752984
-      GUI_84: 703440427
-      GUI_85: -1757024989
-      GUI_86: 1986682363
-      GUI_87: 1068288292
-      GUI_88: 1286094199
-      GUI_89: 901516045
       GUI_9: 460532807
-      GUI_90: 442312201
-      GUI_91: 350739924
-      GUI_92: 1173698213
-      GUI_93: 1558178556
-      GUI_94: 1106796999
-      GUI_95: -1928666588
-      GUI_96: -715305507
-      GUI_97: -306089980
-      GUI_98: -2101178155
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

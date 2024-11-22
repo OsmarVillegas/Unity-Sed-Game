@@ -5011,7 +5011,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 3239648572546292126}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c3b9e143a384f2943a1a1c9d40c84063, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5148,6 +5148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61b2891b3796f8c4580b03ae7f41583d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barraDeTiempo: {fileID: 0}
 --- !u!1 &4240451227801811502
 GameObject:
   m_ObjectHideFlags: 0
