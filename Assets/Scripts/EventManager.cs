@@ -20,7 +20,7 @@ public class EventManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public List<GameObject> enemis;
     public void TriggerEnemyDeath()
     {
         OnEnemyDeath?.Invoke();
