@@ -1105,7 +1105,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_text
-      value: PARTIDA NUEVA
+      value: Iniciar
       objectReference: {fileID: 0}
     - target: {fileID: 7986051084413197120, guid: 1b3e55dd5dbe5674aa3d5af9e5b2a36e, type: 3}
       propertyPath: m_margin.z
@@ -1162,7 +1162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4515518219924301535, guid: 5a72043056a92bb488fcf058722c19d2, type: 3}
       propertyPath: nivel
-      value: MenuEleccionNivel
+      value: MenuSeleccionPersonaje
       objectReference: {fileID: 0}
     - target: {fileID: 7278014070742417425, guid: 5a72043056a92bb488fcf058722c19d2, type: 3}
       propertyPath: m_Pivot.x
