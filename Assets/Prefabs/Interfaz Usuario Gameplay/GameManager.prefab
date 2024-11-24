@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dee7a06efeec1b458fb830b805a9f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personajes:
+  - {fileID: 11400000, guid: 416814c0e5023a04bbb9fea5b51baffd, type: 2}
+  - {fileID: 11400000, guid: 0bac5b3bd9d5c2943a2c52682a9fa628, type: 2}
   barraDeTiempo: {fileID: 0}
   alertaNext: {fileID: 1388363387997821727, guid: f573bc957d078f0429813a91db84c9cd, type: 3}
   ejecutarCinematica: {fileID: 0}

@@ -555,7 +555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -74}
+  m_AnchoredPosition: {x: -0.000018694, y: -63}
   m_SizeDelta: {x: 941.1267, y: 164.64941}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &588385616
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -835,14 +835,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 631873353653355257, guid: 326fa3516531e7d41898e857709f91c2, type: 3}
-      propertyPath: personajes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 631873353653355257, guid: 326fa3516531e7d41898e857709f91c2, type: 3}
-      propertyPath: personajes.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 416814c0e5023a04bbb9fea5b51baffd, type: 2}
     - target: {fileID: 1003706156703894076, guid: 326fa3516531e7d41898e857709f91c2, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -885,7 +877,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   imagen: {fileID: 1937982884}
-  nombre: {fileID: 0}
+  nombre: {fileID: 588385616}
 --- !u!114 &1843177159
 MonoBehaviour:
   m_ObjectHideFlags: 0

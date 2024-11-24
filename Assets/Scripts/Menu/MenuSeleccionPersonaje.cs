@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class MenuSeleccionPersonaje : MonoBehaviour {
   private int index;
   [SerializeField] private Image imagen;
-  [SerializeField] private TextMeshPro nombre;
+  [SerializeField] private TextMeshProUGUI nombre;
   private GameManager gameManager;
 
   private void Start() {
@@ -50,6 +50,6 @@ public class MenuSeleccionPersonaje : MonoBehaviour {
   }
 
   public void IniciarJuego(){
-    SceneManager.LoadScene("MenuEleccionNivel");
+    SceneManager.LoadScene("Nivel 1.1");
   }
 }
