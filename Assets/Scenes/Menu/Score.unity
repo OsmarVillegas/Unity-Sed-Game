@@ -777,8 +777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Gracias por jugar!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
-  m_sharedMaterial: {fileID: -1237865589461976713, guid: 13ad9cc07fe31634685be5f161cb5d0d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f7668fc59510ce64291f63fa1e67f89f, type: 2}
+  m_sharedMaterial: {fileID: -8743879435253738099, guid: f7668fc59510ce64291f63fa1e67f89f, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -812,7 +812,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 19.98
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -866,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2400783381876019356, guid: 5a72043056a92bb488fcf058722c19d2, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4515518219924301535, guid: 5a72043056a92bb488fcf058722c19d2, type: 3}
       propertyPath: nivel

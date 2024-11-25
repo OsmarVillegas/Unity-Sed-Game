@@ -20,15 +20,6 @@ public class GameManager : MonoBehaviour
 
     private bool seEnvioEvento=false;
 
-    private void Awake() {
-      if(GameManager.Instance == null){
-        GameManager.Instance = this;
-        DontDestroyOnLoad(gameObject);
-      }else{
-        Destroy(gameObject);
-      }
-    }
-
     private void Start()
     {
         // Encuentra todos los objetos con el script Enemy

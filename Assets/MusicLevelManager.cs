@@ -50,18 +50,34 @@ public class MusicLevelManager : MonoBehaviour
             PlayMusic(MenuMusic);
         }
 
-        // Cambiar música solo si es el nivel 3
-        if (sceneIndex == 1)
+        // Cambiar música Buck
+        if (sceneIndex == 2)
         {
             PlayMusic(defaultMusic);
         }
 
-        if (sceneIndex == 4)
+        if (sceneIndex == 5)
         {
             PlayMusic(level2Music);
         }
 
-        else if (sceneIndex == 9)
+        else if (sceneIndex == 10)
+        {
+            PlayMusic(level3Music);
+        }
+
+        // Cambiar música Zero
+        if (sceneIndex == 15)
+        {
+            PlayMusic(defaultMusic);
+        }
+
+        if (sceneIndex == 18)
+        {
+            PlayMusic(level2Music);
+        }
+
+        else if (sceneIndex == 21)
         {
             PlayMusic(level3Music);
         }

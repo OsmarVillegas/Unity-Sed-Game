@@ -152765,7 +152765,7 @@ PrefabInstance:
       objectReference: {fileID: 579688845}
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: sceneIndex
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: playableDirector
@@ -153134,7 +153134,7 @@ Transform:
   m_GameObject: {fileID: 1470478592}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.393219, y: 9.951146, z: -9.954484}
+  m_LocalPosition: {x: 13.40031, y: 9.951085, z: -9.954484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

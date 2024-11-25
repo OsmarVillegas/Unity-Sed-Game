@@ -17,19 +17,19 @@ public class CalcularRango : MonoBehaviour
 
         print("Rango: " + value);
 
-        if (value >= 60000.0f)
+        if (value >= 50000.0f)
         {
             image.sprite = sprites[3];
         }
-        else if (value >= 40000.0f && value <= 60000.0f)
+        else if (value >= 40000.0f && value <= 50000.0f)
         {
             image.sprite = sprites[2];
         }
-        else if (value >= 20000.0f && value < 40000.0f)
+        else if (value >= 30000.0f && value < 40000.0f)
         {
             image.sprite = sprites[1];
         }
-        else if (value < 20000.0f)
+        else if (value < 30000.0f)
         {
             image.sprite = sprites[0];
         }

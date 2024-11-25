@@ -306,11 +306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c5170dc31ade94c909aacb3b3e34a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &65978787 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3358596173308458466, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
-  m_PrefabInstance: {fileID: 1019817796}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &100872684
 GameObject:
   m_ObjectHideFlags: 0
@@ -9236,7 +9231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2D: {fileID: 0}
-  jugador: {fileID: 65978787}
+  jugador: {fileID: 1119091482}
   vida: 100
   barraDeVida: {fileID: 1744328931}
   controladorAtaque: {fileID: 152876250}
@@ -9424,7 +9419,7 @@ Transform:
   m_GameObject: {fileID: 425652581}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.7335167, y: -6.8979497, z: -9.954484}
+  m_LocalPosition: {x: 1.7509918, y: -6.8978996, z: -9.954484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10114,7 +10109,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ceccca814a9cb8f459738d6dc6436802, type: 3}
---- !u!1001 &1019817796
+--- !u!1001 &1119091481
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10124,11 +10119,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3358596173308458466, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.562
+      value: -9.64
       objectReference: {fileID: 0}
     - target: {fileID: 3358596173308458466, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.68
+      value: -10.72
       objectReference: {fileID: 0}
     - target: {fileID: 3358596173308458466, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10171,13 +10166,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1505189262}
     - target: {fileID: 7435985368946640113, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
-      propertyPath: cooldownEsquive
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7435985368946640113, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: ejecutarCinematica
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1806650879}
     - target: {fileID: 7435985368946640113, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: tutorialFinalizado
       value: 1
@@ -10189,7 +10180,7 @@ PrefabInstance:
     - target: {fileID: 8337596445475814966, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: ejecutarCinematica
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1806650879}
     - target: {fileID: 8337596445475814966, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
       propertyPath: tutorialFinalizado
       value: 1
@@ -10203,6 +10194,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
+--- !u!4 &1119091482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3358596173308458466, guid: 2752d7167d483d0439f9a429d8b7673b, type: 3}
+  m_PrefabInstance: {fileID: 1119091481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1227867751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10289,7 +10285,7 @@ MonoBehaviour:
   m_Priority: 10
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
-  m_Follow: {fileID: 65978787}
+  m_Follow: {fileID: 1119091482}
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 9
@@ -10318,7 +10314,7 @@ Transform:
   m_GameObject: {fileID: 1363328510}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.562, y: -10.68, z: -9.954484}
+  m_LocalPosition: {x: -9.640001, y: -10.72, z: -9.954484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -70994,6 +70990,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1119091482}
     - target: {fileID: 2108720462147782842, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: m_Name
       value: EjecutarCinematicaSalida
@@ -71047,6 +71047,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
+--- !u!114 &1806650879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
+  m_PrefabInstance: {fileID: 1806650878}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cc8f61b5f7b87e4d8947393abe65fd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1933939663
 GameObject:
   m_ObjectHideFlags: 0
@@ -71222,7 +71233,7 @@ PrefabInstance:
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 65978787}
+      objectReference: {fileID: 0}
     - target: {fileID: 1637722468232720541, guid: 1c93046984d24734ca2d4fbc2da847c3, type: 3}
       propertyPath: sceneIndex
       value: 12
@@ -71569,7 +71580,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 425652584}
   - {fileID: 1678077151}
-  - {fileID: 1019817796}
   - {fileID: 1462232014}
   - {fileID: 1363328513}
   - {fileID: 961777790}
@@ -71585,3 +71595,4 @@ SceneRoots:
   - {fileID: 2084312354}
   - {fileID: 1806650878}
   - {fileID: 997072252}
+  - {fileID: 1119091481}

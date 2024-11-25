@@ -1,55 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuSeleccionPersonaje : MonoBehaviour {
-  private int index;
-  [SerializeField] private Image imagen;
-  [SerializeField] private TextMeshProUGUI nombre;
-  private GameManager gameManager;
 
-  private void Start() {
-    gameManager = GameManager.Instance;
+    [SerializeField] private Image imageComponent;
+    [SerializeField] private Sprite[] personajes;
+    private int indexPersonaje;
 
-    index = PlayerPrefs.GetInt("JugadorIndex");
-
-    if(index > gameManager.personajes.Count - 1){
-      index = 0;
+    private void Start() {
+        indexPersonaje = 0;
+        imageComponent.sprite = personajes[indexPersonaje];
     }
 
-    CambiarPantalla();
-  }
-
-  private void CambiarPantalla() {
-    PlayerPrefs.SetInt("JugadorIndex", index);
-    imagen.sprite = gameManager.personajes[index].imagen;
-    nombre.text = gameManager.personajes[index].nombre;
-  }
-
-  public void SiguientePersonaje(){
-    if(index == gameManager.personajes.Count - 1){
-      index = 0;
-    }else{
-      index += 1;
+    public void derecha()
+    {
+        indexPersonaje = 1;
+        imageComponent.sprite = personajes[indexPersonaje];
     }
 
-    CambiarPantalla();
-  }
-
-   public void AnteriorPersonaje(){
-    if(index == 0){
-      index = gameManager.personajes.Count - 1;
-    }else{
-      index -= 1;
+    public void izquierda()
+    {
+        indexPersonaje = 0;
+        imageComponent.sprite = personajes[indexPersonaje];
     }
 
-    CambiarPantalla();
-  }
+    public void seleccionarPersonaje()
+    {
 
-  public void IniciarJuego(){
-    SceneManager.LoadScene("Nivel 1.1");
-  }
+        if (indexPersonaje == 0)
+        {
+            SceneManager.LoadScene(9);
+        }
+
+        if (indexPersonaje == 1)
+        {
+            SceneManager.LoadScene(14);
+        }
+    }
+
 }

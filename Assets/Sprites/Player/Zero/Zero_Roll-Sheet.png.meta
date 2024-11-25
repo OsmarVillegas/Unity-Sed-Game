@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 9
+        width: 47
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88d5c56c7ea86814ba0057e0e6159f1d
+      internalID: -2051380570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 10
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e922ec373ea02d4da028cfc6dfe3725
+      internalID: -2100722032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 11
+        width: 36
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4458a30cf6b20804684fdeda3523233c
+      internalID: 1081890390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 11
+        width: 37
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d85c0f262e25f418cbb265622515c7
+      internalID: 263651993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 11
+        width: 40
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86639aa2516847e4786af09b1da1ef6e
+      internalID: 1810474871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 10
+        width: 46
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6b96e5bd908e5489a0c435ad04c40e
+      internalID: 1917102368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zero_Roll-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 11
+        width: 43
+        height: 32
+      alignment: 9
+      pivot: {x: 0.484859, y: 0.5869359}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b179dc331fe4e65419a66000985931e1
+      internalID: 2122751506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +253,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Zero_Roll-Sheet_0: -2051380570
+      Zero_Roll-Sheet_1: -2100722032
+      Zero_Roll-Sheet_2: 1081890390
+      Zero_Roll-Sheet_3: 263651993
+      Zero_Roll-Sheet_4: 1810474871
+      Zero_Roll-Sheet_5: 1917102368
+      Zero_Roll-Sheet_6: 2122751506
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
