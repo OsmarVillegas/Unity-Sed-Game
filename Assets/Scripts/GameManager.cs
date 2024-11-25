@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+    public List<Personajes> personajes;
     public BarraDeTiempo barraDeTiempo;
     private Enemigo[] enemigo;
     private Jefe jefe;
@@ -17,6 +19,15 @@ public class GameManager : MonoBehaviour
     public event Action nivelFinalizado;
 
     private bool seEnvioEvento=false;
+
+    private void Awake() {
+      if(GameManager.Instance == null){
+        GameManager.Instance = this;
+        DontDestroyOnLoad(gameObject);
+      }else{
+        Destroy(gameObject);
+      }
+    }
 
     private void Start()
     {

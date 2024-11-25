@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1505049cb79ae4488c16b8842a2d18, type: 3}
+  m_Name: BuckShadow
+  m_EditorClassIdentifier: 
+  personajeJugable: {fileID: 4739273338179296933, guid: e53994c156eec67498b9d55201c72d7b, type: 3}
+  imagen: {fileID: -1580409411, guid: 12bc16d0c0d36c94780e3def95912978, type: 3}
+  nombre: Buck Shadow
