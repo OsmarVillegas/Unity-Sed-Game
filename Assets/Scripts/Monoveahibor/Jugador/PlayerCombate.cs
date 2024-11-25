@@ -129,7 +129,6 @@ public class PlayerCombate : MonoBehaviour
 
         foreach (Collider2D colisionador in objetos)
         {
-            print(objetos);
             if (colisionador.CompareTag("Enemigo") && !colisionador.isTrigger)
             {
                 colisionador.transform.GetComponent<EnemigoEstandar>().TomarDanio(dañoGolpe);

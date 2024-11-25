@@ -13,8 +13,15 @@ public class ExplosionJefe : MonoBehaviour
     [SerializeField] private float tiempoDeVida;
 
     // Start is called before the first frame update
+
+    [Header("Sonido")]
+    [SerializeField] private AudioClip explosion;
+
+
     void Start()
     {
+        ControladorSonido.instance.EjecutarSonido(explosion);
+
         Destroy(gameObject, tiempoDeVida);
     }
 

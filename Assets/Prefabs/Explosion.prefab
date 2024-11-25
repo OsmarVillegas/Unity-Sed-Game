@@ -124,6 +124,7 @@ MonoBehaviour:
   dimensionesCaja: {x: 4, y: 4}
   posicionCaja: {fileID: 6644221541529432236}
   tiempoDeVida: 1.03
+  explosion: {fileID: 8300000, guid: a15f0cfa633555141a5b7d1fd579498f, type: 3}
 --- !u!1 &5444680563502379351
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,13 @@ guid: 9a61330222a2f1b4e819baa9f2c8c9e2
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb2D: {instanceID: 0}
+  - jugador: {instanceID: 0}
+  - barraDeVida: {instanceID: 0}
+  - controladorAtaque: {instanceID: 0}
+  - danioSonido: {fileID: 8300000, guid: 341fdb3bec8092646b98787931d39007, type: 3}
+  - muerteSonido: {fileID: 8300000, guid: 7b8958e32bdc2ee4b9990cbbb2e59eaf, type: 3}
   executionOrder: 500
   icon: {instanceID: 0}
   userData: 

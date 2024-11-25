@@ -32,4 +32,9 @@ public class Score : ScriptableObject
         ScoreData data = JsonUtility.FromJson<ScoreData>(json);
         puntuacion = data.puntuacion;
     }
+
+    public float GetScore()
+    {
+        return puntuacion;
+    }
 }

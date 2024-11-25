@@ -30,6 +30,7 @@ public class EjecutarCinematica : MonoBehaviour
             detenerJugador?.Invoke();
             StartCoroutine(MoveToCinematicStartPoint(player));
             StartCoroutine(cargarConDelay(delay));
+            ControladorNiveles.instancia.AumentarNiveles();
         }
     }
 

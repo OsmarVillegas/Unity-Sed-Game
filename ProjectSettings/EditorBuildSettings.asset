@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Pantalla Final.unity
     guid: 3cf4951989884a24c89365b8c4195498
+  - enabled: 1
+    path: Assets/Scenes/Menu/Score.unity
+    guid: 68878716b887af34982d42ca593509fd
   m_configObjects: {}

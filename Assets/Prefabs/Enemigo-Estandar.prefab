@@ -5136,6 +5136,7 @@ MonoBehaviour:
   tiempoAntesDeAtaque: 0.05
   duracionAtaque: 1.5
   coolDownAtaque: 1
+  muerteSonido: {fileID: 8300000, guid: 7b8958e32bdc2ee4b9990cbbb2e59eaf, type: 3}
 --- !u!114 &5336115105940435239
 MonoBehaviour:
   m_ObjectHideFlags: 0

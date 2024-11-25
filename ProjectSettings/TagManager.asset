@@ -9,6 +9,7 @@ TagManager:
   - BarraDeTiempo
   - Jefe
   - Meta
+  - EjecutarCinematica
   layers:
   - Default
   - TransparentFX

@@ -22,6 +22,10 @@ public class Jefe : MonoBehaviour
     [SerializeField] private float radioAtaque;
     [SerializeField] private float dañoAtaque;
 
+    [Header("Sonido")]
+    [SerializeField] private AudioClip danioSonido;
+    [SerializeField] private AudioClip muerteSonido;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -45,8 +49,14 @@ public class Jefe : MonoBehaviour
 
         barraDeVida.CambiarVidaActual(vida);
 
+        if (vida > 0)
+        {
+            ControladorSonido.instance.EjecutarSonido(danioSonido);
+        }
+
         if(vida <= 0)
         {
+            ControladorSonido.instance.EjecutarSonido(muerteSonido);
             animator.SetTrigger("Muerte");
         }
 

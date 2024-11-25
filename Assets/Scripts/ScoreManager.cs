@@ -15,6 +15,8 @@ public class ScoreManager : MonoBehaviour
     [SerializeField]private bool salvarPuntaje = false;
     [SerializeField] private bool ObtenerPuntaje = false;
 
+    private float puntuacionGuardada;
+
     void Start()
     {
         gameManager.nivelFinalizado += calcularPuntaje;
@@ -22,12 +24,6 @@ public class ScoreManager : MonoBehaviour
         {
             LoadScore();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void Awake()
@@ -47,6 +43,7 @@ public class ScoreManager : MonoBehaviour
         if (File.Exists(saveFilePath))
         {
             string json = File.ReadAllText(saveFilePath);
+
             score.FromJson(json); // Convierte el JSON al ScriptableObject
             Debug.Log("Puntuación cargada: " + score.puntuacion);
         }
@@ -60,12 +57,12 @@ public class ScoreManager : MonoBehaviour
     private void calcularPuntaje()
     {
         score.AddScore(barradeTiempo.GetTiempoRestante() * 50);
+
         if (salvarPuntaje)
         {
             SaveScore();
-            score.ResetScore();
         }
-        print(score);
+        print("Score Nivel: " + score.GetScore());
     }
 
 }

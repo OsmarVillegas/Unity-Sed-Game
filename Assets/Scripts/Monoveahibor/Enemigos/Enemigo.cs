@@ -16,19 +16,24 @@ public class Enemigo : Entidad
 
     [SerializeField] private ParticleSystem particulas;
 
+    [Header("Sonido")]
+
+    [SerializeField] private AudioClip muerteSonido;
+
     public void TomarDanio(float danio)
     {
         vida -= danio;
 
         if (vida <= 0)
         {
+            ControladorSonido.instance.EjecutarSonido(muerteSonido);
+            // GameObject.FindGameObjectWithTag("EjecutarCinematica").GetComponent<Meta>().EnemigoEliminado();
             Muerte();
         }
     }
 
     private void Muerte()
     {
-        //GameObject.FindGameObjectWithTag("Meta").GetComponent<Meta>().EnemigoEliminado();
         animator.SetTrigger("Muerte");
         estaVivo = false;
         particulas.Play();
